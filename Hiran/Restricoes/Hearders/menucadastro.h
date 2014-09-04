@@ -12,7 +12,6 @@ class Cadastro : public QMainWindow
     Q_OBJECT
 
 public slots:
-
     void implementaAcaoSair();
 
 public:
