@@ -1,51 +1,54 @@
-#include "menucadastro.h"
-#include "ui_menucadastro.h"
+#include "cadastro.h"
+#include "ui_cadastro.h"
 
-menucadastro::menucadastro(QWidget *parent) :
+Cadastro::Cadastro(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::menucadastro)
+    ui(new Ui::Cadastro)
 {
     ui->setupUi(this);
 
     this->criaAcao();
     this->criaMenu();
 
-    connect(ui->btn_Confirma, SIGNAL(clicked()), this, SLOT(Confirma()));
-    connect(ui->btn_Cancelar, SIGNAL(clicked()), this, SLOT(Cancelar()));
+    statusBar()->showMessage(tr("Cadastro Restrições."));
+    statusBar()->setSizeGripEnabled(false);
+
+    connect(ui->btn_confirma, SIGNAL(clicked()),this, SLOT(confirma()));
+    connect(ui->btn_cancelar, SIGNAL(clicked()),this, SLOT(cancelar()));
 }
 
-menucadastro::~menucadastro()
+Cadastro::~Cadastro()
 {
     delete acaoSair;
     delete menuArquivo;
     delete ui;
 }
-void menucadastro::criaAcao()
+
+void Cadastro::criaAcao()
 {
     acaoSair = new QAction(QString("&Sair"), this);
     acaoSair->setShortcut(QString("CTRL+S"));
-    acaoSair->setStatusTip(QString("Encerra o aplicativo."));
-    connect(acaoSair, SIGNAL(triggered()),this,SLOT(implementaAcaoSair()));
+    acaoSair->setStatusTip(QString("Encerra Cadastro."));
+    connect(acaoSair, SIGNAL(triggered()), this, SLOT(implementaAcaoSair()));
+
 }
-void menucadastro::criaMenu()
+
+void Cadastro::criaMenu()
 {
     menuArquivo = menuBar()->addMenu(QString("&Arquivo"));
     menuArquivo->addAction(acaoSair);
 }
-void menucadastro::implementaAcaoSair()
+
+void Cadastro::implementaAcaoSair()
 {
     close();
 }
-void menucadastro::selecionados()
-{
 
-}
-
-void menucadastro::Confirma()
-{
-
-}
-void menucadastro::Cancelar()
+void Cadastro::cancelar()
 {
     close();
+}
+
+void Cadastro::confirma()
+{
 }
