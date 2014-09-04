@@ -1,33 +1,32 @@
-#ifndef MENUCADASTRO_H
-#define MENUCADASTRO_H
+#ifndef CADASTRO_H
+#define CADASTRO_H
 
 #include <QMainWindow>
 
-namespace Ui 
-{
-class menucadastro;
+namespace Ui {
+class Cadastro;
 }
 
-class menucadastro : public QMainWindow
+class Cadastro : public QMainWindow
 {
     Q_OBJECT
+
 public slots:
-    void Confirma();
-    void Cancelar();
+
+    void implementaAcaoSair();
 
 public:
-    explicit menucadastro(QWidget *parent = 0);
-    ~menucadastro();
+    explicit Cadastro(QWidget *parent = 0);
+    ~Cadastro();
 
 private:
-    Ui::menucadastro *ui;
+    Ui::Cadastro *ui;
     QAction *acaoSair;
     QMenu *menuArquivo;
-
     void criaAcao();
-    void implementaAcaoSair();
     void criaMenu();
-    void selecionados();
+    void confirma();
+    void cancelar();
 };
 
-#endif // MENUCADASTRO_H
+#endif // CADASTRO_H
