@@ -12,6 +12,8 @@ class Cadastro : public QMainWindow
     Q_OBJECT
 
 public slots:
+    void confirma();
+    void cancelar();
     void implementaAcaoSair();
 
 public:
@@ -24,8 +26,7 @@ private:
     QMenu *menuArquivo;
     void criaAcao();
     void criaMenu();
-    void confirma();
-    void cancelar();
+
 };
 
 #endif // CADASTRO_H
