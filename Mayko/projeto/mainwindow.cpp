@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "cadastro.h"
-#include "menucadastro.h"
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -18,6 +18,9 @@ MainWindow::~MainWindow()
 void MainWindow::on_btn_cadastrar_clicked()
 {
  cadastro Cadastro;
+ MainWindow w;
+
  Cadastro.setModal(true);
+// hide(w);
  Cadastro.exec();
 }

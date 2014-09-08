@@ -1,6 +1,6 @@
 #include "cadastro.h"
 #include "ui_cadastro.h"
-#include "menucadastro.h"
+
 
 cadastro::cadastro(QWidget *parent) :
     QDialog(parent),
@@ -20,6 +20,6 @@ void cadastro::on_btn_restricoes_clicked()
    // restricao.setModal(true);
    // restricao.exec();
    // restricao = new menucadastro(this);
-    restricao->show();
+    //restricao->show();
 
 }

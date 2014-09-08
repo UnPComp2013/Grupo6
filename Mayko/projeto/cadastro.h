@@ -2,7 +2,7 @@
 #define CADASTRO_H
 
 #include <QDialog>
-#include "menucadastro.h"
+
 
 namespace Ui {
 class cadastro;
@@ -21,7 +21,7 @@ private slots:
 
 private:
     Ui::cadastro *ui;
-    menucadastro *restricao;
+
 };
 
 #endif // CADASTRO_H
