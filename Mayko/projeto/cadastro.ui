@@ -22,9 +22,9 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>10</y>
-     <width>131</width>
+     <x>240</x>
+     <y>20</y>
+     <width>71</width>
      <height>20</height>
     </rect>
    </property>
@@ -32,74 +32,8 @@
     <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
    <property name="text">
-    <string>Cadastro Professor</string>
+    <string>Cadastro </string>
    </property>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>50</y>
-     <width>471</width>
-     <height>161</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QLabel" name="txt_nome">
-      <property name="styleSheet">
-       <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Nome:</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="edt_nome"/>
-    </item>
-    <item>
-     <widget class="QLabel" name="txt_materia">
-      <property name="text">
-       <string>Materias</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QComboBox" name="comboBox">
-      <item>
-       <property name="text">
-        <string/>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Calculo I</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Calculo 2</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Calculo 3</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Circuito e Instrumentação</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Matematica aplicada a engenharia(MATLAB)</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-   </layout>
   </widget>
   <widget class="QWidget" name="layoutWidget_6">
    <property name="geometry">
@@ -130,284 +64,83 @@
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>220</y>
-     <width>471</width>
-     <height>161</height>
+     <x>70</x>
+     <y>70</y>
+     <width>411</width>
+     <height>251</height>
     </rect>
    </property>
    <property name="title">
-    <string>Tabela de Horarios</string>
+    <string>GroupBox</string>
    </property>
-   <widget class="QWidget" name="layoutWidget_2">
+   <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>20</y>
-      <width>85</width>
-      <height>130</height>
+      <y>40</y>
+      <width>46</width>
+      <height>13</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
-     <item>
-      <widget class="QLabel" name="lab_Segunda">
-       <property name="text">
-        <string>Segunda</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Segunda1">
-       <property name="text">
-        <string>18:10/19:00</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Segunda2">
-       <property name="text">
-        <string>19:00/19:50</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Segunda3">
-       <property name="text">
-        <string>19:50/20:40</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Segunda4">
-       <property name="text">
-        <string>20:40/21:30</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Segunda5">
-       <property name="text">
-        <string>21:30/22:20</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <property name="text">
+     <string>Nome:</string>
+    </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget_3">
+   <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>20</y>
-      <width>85</width>
-      <height>130</height>
+      <x>20</x>
+      <y>80</y>
+      <width>46</width>
+      <height>13</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_3">
-     <item>
-      <widget class="QLabel" name="lab_Terca">
-       <property name="text">
-        <string>Terça</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Terca1">
-       <property name="text">
-        <string>18:10/19:00</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Terca2">
-       <property name="text">
-        <string>19:00/19:50</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Terca3">
-       <property name="text">
-        <string>19:50/20:40</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Terca4">
-       <property name="text">
-        <string>20:40/21:30</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Terca5">
-       <property name="text">
-        <string>21:30/22:20</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <property name="text">
+     <string>Email:</string>
+    </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget_4">
+   <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>20</y>
-      <width>85</width>
-      <height>130</height>
+      <x>70</x>
+      <y>40</y>
+      <width>113</width>
+      <height>20</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_4">
-     <item>
-      <widget class="QLabel" name="lab_Quarta">
-       <property name="text">
-        <string>Quarta</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Quarta1">
-       <property name="text">
-        <string>18:10/19:00</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Quarta2">
-       <property name="text">
-        <string>19:00/19:50</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Quarta3">
-       <property name="text">
-        <string>19:50/20:40</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Quarta4">
-       <property name="text">
-        <string>20:40/21:30</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Quarta5">
-       <property name="text">
-        <string>21:30/22:20</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget_5">
+   <widget class="QLineEdit" name="lineEdit_2">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>20</y>
-      <width>85</width>
-      <height>130</height>
+      <x>70</x>
+      <y>80</y>
+      <width>113</width>
+      <height>20</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_5">
-     <item>
-      <widget class="QLabel" name="lab_Quinta">
-       <property name="text">
-        <string>Quinta</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Quinta1">
-       <property name="text">
-        <string>18:10/19:00</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Quinta2">
-       <property name="text">
-        <string>19:00/19:50</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Quinta3">
-       <property name="text">
-        <string>19:50/20:40</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Quinta4">
-       <property name="text">
-        <string>20:40/21:30</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Quinta5">
-       <property name="text">
-        <string>21:30/22:20</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget_7">
+   <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>20</y>
-      <width>85</width>
-      <height>130</height>
+      <x>20</x>
+      <y>120</y>
+      <width>46</width>
+      <height>13</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_6">
-     <item>
-      <widget class="QLabel" name="lab_Sexta">
-       <property name="text">
-        <string>Sexta</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Sexta1">
-       <property name="text">
-        <string>18:10/19:00</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Sexta2">
-       <property name="text">
-        <string>19:00/19:50</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Sexta3">
-       <property name="text">
-        <string>19:50/20:40</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Sexta4">
-       <property name="text">
-        <string>20:40/21:30</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Sexta5">
-       <property name="text">
-        <string>21:30/22:20</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <property name="text">
+     <string>Curso:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_3">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>120</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
    </widget>
   </widget>
  </widget>
