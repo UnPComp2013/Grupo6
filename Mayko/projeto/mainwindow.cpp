@@ -31,6 +31,8 @@ w.close();
 
 void MainWindow::on_btn_consultar_clicked()
 {
+MainWindow w;
+w.close();
 Consulta = new consulta(this);
 Consulta->show();
 }
