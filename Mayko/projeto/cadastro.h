@@ -17,7 +17,7 @@ public:
     ~cadastro();
 
 private slots:
-    void on_btn_restricoes_clicked();
+
 
 private:
     Ui::cadastro *ui;

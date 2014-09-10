@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "cadastro.h"
+#include "consulta.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -8,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
 }
 
 MainWindow::~MainWindow()
@@ -21,6 +23,13 @@ void MainWindow::on_btn_cadastrar_clicked()
  MainWindow w;
 
  Cadastro.setModal(true);
-// hide(w);
+w.close();
  Cadastro.exec();
+}
+
+
+void MainWindow::on_btn_consultar_clicked()
+{
+Consulta = new consulta(this);
+Consulta->show();
 }

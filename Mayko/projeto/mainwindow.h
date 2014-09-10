@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include "consulta.h"
 namespace Ui {
 class MainWindow;
 }
@@ -18,8 +18,11 @@ public:
 private slots:
     void on_btn_cadastrar_clicked();
 
+    void on_btn_consultar_clicked();
+
 private:
     Ui::MainWindow *ui;
+    consulta *Consulta;
 };
 
 #endif // MAINWINDOW_H
