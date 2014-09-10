@@ -19,12 +19,13 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_btn_cadastrar_clicked()
 {
- cadastro Cadastro;
+
  MainWindow w;
 
- Cadastro.setModal(true);
+
 w.close();
- Cadastro.exec();
+ Cadastro = new cadastro(this);
+ Cadastro->show();
 }
 
 

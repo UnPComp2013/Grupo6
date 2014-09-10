@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "consulta.h"
+#include "cadastro.h"
 namespace Ui {
 class MainWindow;
 }
@@ -23,6 +24,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     consulta *Consulta;
+    cadastro *Cadastro;
 };
 
 #endif // MAINWINDOW_H
