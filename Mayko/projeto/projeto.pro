@@ -14,10 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    cadastro.cpp
+    cadastro.cpp \
+    consulta.cpp
 
 HEADERS  += mainwindow.h \
-    cadastro.h
+    cadastro.h \
+    consulta.h
 
 FORMS    += mainwindow.ui \
-    cadastro.ui
+    cadastro.ui \
+    consulta.ui
