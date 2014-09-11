@@ -1,5 +1,5 @@
 <?php
-	$DBHost = "127.0.0.1";  // localhost ou o IP do Banco
+	$DBHost = "localhost";  // localhost ou o IP do Banco
 	$DBUser = "root";  // Usuário do Banco
 	$DBPassword = "vertrigo";  // Senha do Banco
 	$DBName = "gh";  // Nome do Banco de Dados
