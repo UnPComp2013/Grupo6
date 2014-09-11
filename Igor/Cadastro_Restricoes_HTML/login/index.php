@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=100" />
+    <title>Autoatendimento - UNP</title>
+    <link href="sis_layout/login.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        function validaForm(){
+            var usuario  = document.getElementById("usuario");
+            var senha = document.getElementById("senha");
+            
+            if( usuario.value == "" & senha.value == "" ){
+                sinalizacampo("usuario", "<p>informe seu usuário e senha</p>", "erro");
+                return false;
+            }
+            if( usuario.value == ""){
+                sinalizacampo("usuario", "<p>informe seu usuário</p>", "erro");
+                return false;
+            }
+            if( senha.value == ""){
+                sinalizacampo("senha", "<p>informe sua senha</p>", "erro");
+                return false;
+            }
+        	return true;
+        }
+        
+        function sinalizacampo(campo, msg, classe) {
+            var Mensagem = document.getElementById("mensagem");
+            var CampoSinalizado = document.getElementById(campo);
+            Mensagem.innerHTML = msg+"<label onClick=fechar('"+campo+"');>X</label>";
+            Mensagem.className = classe;
+            CampoSinalizado.focus();
+        }
+        
+        function fechar(campo){
+            document.getElementById("mensagem").className = "oculto";
+            document.getElementById(campo).focus();
+        }
+    </script>
+</head>
+<body onLoad="document.form.usuario.focus();">
+<center>
+
+
+
+<link rel="stylesheet" type="text/css" href="/sis_layout/layout.css" />
+<link rel="stylesheet" type="text/css" href="/sis_layout/menu.css" />
+<link rel="stylesheet" type="text/css" href="/sis_layout/tablecloth.css" />
+<!--[if IE 6]>
+    <link rel="stylesheet" href="/sis_layout/tabs_ie6.css" type="text/css" media="screen" />
+<![endif]-->
+<script type="text/javascript" src="/sis_layout/tablecloth.js"></script>
+
+
+
+<div id="header">
+	<div id="in-header">            
+        <img src="/sis_imagens/logomarca_unp.jpg" class="logo"  
+             alt="Universidade Potiguar. Laureate International Universities" 
+             title="Universidade Potiguar. Laureate International Universities" />
+             
+        <link rel="shortcut icon" href="/favicon.ico">
+        
+                
+
+        <h1 style="float:right; margin:40px 0 0 0; color:#ddd; font-size:35px;">Autoatendimento</h1>
+    	
+    </div>
+</div> 
+
+    <div id="login">
+    	<div id="mensagem" class="oculto"></div>
+    	<div id="ambienteLogin">
+            <h2>Login</h2>
+            <form method="post" action="logar.asp" name="form" onSubmit="return validaForm();">
+                <label for="usuario">Usuário:</label>
+                <input type="text" maxlength="30" name="usuario" id="usuario" class="half" tabindex="1" value="" 
+                       alt="Por favor, digite seu nome de usuário. Se você é novo no autoatendimento, digite alt+c para cadastrar novo usuário."
+                       title="Por favor, digite seu nome de usuário. Se você é novo no autoatendimento, digite alt+c para cadastrar novo usuário." />
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha" class="half" tabindex="2" 
+                       alt="agora digite sua senha. Se deseja recuperar sua senha digite alt+e."
+                       title="agora digite sua senha. Se deseja recupear sua senha digite alt+e."/>
+                <input type="submit" value="Entrar" tabindex="3" alt="Tecle enter para entrar no autoatendimento" title="Tecle enter para entrar no autoatendimento"  class="bt"/>
+            </form>
+            
+                <span class="cadastrar">
+                    <a href="/webmail/solicitarbkp.asp" accesskey="c" alt="Acesse para cadastrar seu usuário" title="Acesse para cadastrar seu usuário" tabindex="4">Cadastrar</a>
+                </span>
+                <span class="esqueciSenha">
+                    <a href="/webmail/esqueciSenha.asp" accesskey="e" alt="Acesso para recuperar sua senha. " title="Acesso para recuperar sua senha" tabindex="5">Esqueci minha senha</a>
+                </span>
+    	</div>
+    </div>
+
+ <div id="footer">
+	<div id="in-footer">
+		<div class="creditos">
+            <p align="left">
+                Universidade Potiguar - Laureate International Universities
+            </p>
+            <p align="left">
+              	Natal/RN | +55 (84) 3215.1234 || Mossoró/RN | +55 (84) 3323.8200 |
+              	<a href="mailto:callcenter@unp.br" style="color:inherit; font-weight:normal; text-decoration:underline;">
+                	callcenter@unp.br
+                </a>
+            </p>
+		</div>
+        <div class="copyright">copyright 2014</div>
+	</div>
+ </div>
+
+<script type="text/javascript" src="/sis_funcoes_js/analytics.js"></script>
+<script type="text/javascript" src="/sis_funcoes_js/verifica_versao_navegador.js"></script>
+</center>
+</body>
+</html>
