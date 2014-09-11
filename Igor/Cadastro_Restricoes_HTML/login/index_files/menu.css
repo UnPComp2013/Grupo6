@@ -1,0 +1,859 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+/* MENU PRINCIPAL */
+
+
+#in-header #menu{
+	width:auto;
+	height:auto;
+	float:right;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	padding:0 0 0 0;
+	margin:25px 10px 0 0;
+	list-style-type:none;
+	
+	}
+
+
+#in-header #menu li{
+	width:auto;
+	height:auto;
+	float:left;
+	}
+	
+#in-header #menu li p{
+	font-size:10px;
+	clear:both;
+	margin:0 10px 0 11px;
+	}
+
+#in-header #menu li a{
+	width:auto;
+	height:auto;
+	float:left;
+	margin: 0 0 0 3px;
+	font-size:12px;
+	text-decoration:none;
+	color:#0099cc;
+
+	}
+
+#in-header #menu li a img{
+	float:left;
+	border:none;
+	margin:0 3px 0 0;
+	padding:0;
+	}
+
+
+#in-header #menu li a:hover{
+	width:auto;
+	height:auto;
+	float:left;
+	font-size:12px;
+	text-decoration:none;
+	color:#09C;
+	}
+
+#in-header #menu li.sair{
+	border-left:1px solid #fff;
+}
+
+
+#in-header #menu li.sair a{
+	color: #ff9900;
+}
+
+#container #in-container #content .sistemas{
+	width:780px;
+	float:left;
+	clear:left;
+	margin:30px 0 0 0;
+	padding:0 0 20px 0;
+}
+
+.lista_sistemas{
+	list-style: none;
+}
+
+.lista_sistemas li{
+	display: inline-block;
+}
+.lista_sistemas li a {
+	text-align:left;
+	margin: 7px;
+	padding: 7px 15px 6px 10px;
+}
+.lista_sistemas li img{
+	vertical-align:middle;
+}
+
+#container #in-container #content .academico{
+	padding:0 0 10px 0;
+	float:left
+}
+
+#container #in-container #content .financeiro{
+	border-bottom:1px solid #ccc;
+	margin:30px 0 0 0;
+	padding:0 0 20px 0;
+	float:left
+}
+
+.acad{
+width:100%;
+border-bottom:1px solid #ccc;
+padding: 0 0 10px 0;
+color:#000; 
+margin:0 0 15px 0;
+}
+
+.fin{
+width:200px;
+color:#000;
+margin:20px 0 -25px 0;
+float:left;
+
+}
+
+.sis{
+width:100%;
+border-bottom:1px solid #ccc;
+color:#000; 
+margin:0 0 15px 0;
+padding: 0 0 10px 0;
+}
+
+
+#container #in-container #content  ul li a.calendario{
+background:url(img/calendar.gif) #f4f4f4 2px no-repeat;
+}
+
+
+.menuD, .menuD ul {
+	padding:4px 0 4px 7px;
+	list-style: none;
+	font: bold 12px Verdana, Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+ }
+ 
+.menuD li {
+	width:auto;
+	#height:30px;
+	float: left;
+	color:#000;
+	border:none;
+	
+	
+ }
+ 
+.menuD a.arrow{
+	width:103px;
+	font-weight:bold;
+	background: url(img/arrow_sub_menu.png) 95px  no-repeat #f4f4f4;
+	clear:left;
+	border:1px dotted #ccc;
+	border-bottom:2px solid #ccc;
+ }
+ 
+.menuD a.arrow:hover{
+	width:103px;
+	font-weight:bold;
+	background: url(img/arrow_sub_menu.png) 95px  no-repeat #f4f4f4;
+	clear:left;
+	border:1px dotted #ccc;
+	border-bottom:2px solid #ccc;
+ }
+
+.menuD  ul.documentacoes{
+	width:650px;
+	display: inline;
+	left:0;
+	*position:absolute;
+	border:1px solid #ccc;
+	background:#f9f9f9;
+	float:left;
+	font-size:11px;
+ }
+ 
+.menuD  ul.documentacoes li a{
+	width:300px;
+	padding:5px;
+ }
+ 
+ 
+.menuD  ul.matricula{
+	width:650px;
+	display: inline;
+	left:0;
+	*position:absolute;
+	border:1px solid #ccc;
+	background:#f9f9f9;
+	float:left;
+	font-size:11px;
+ }
+ 
+.menuD  ul.matricula li a{
+	width:300px;
+	padding:5px;
+ }
+ 
+ 
+.menuD li.financeiro{
+	clear:left;	
+	width:auto;
+	height:12px;
+	border-bottom:2px solid #ccc;
+	margin:0 0 0 0;
+	float:left;
+ }
+ 
+.menuD  ul.mensalidade{
+	width:650px;
+	display: inline;
+	left:0;
+	*position:absolute;
+	border:1px solid #ccc;
+	background:#f9f9f9;
+	font-size:11px;
+	
+ }
+ 
+.menuD  ul.mensalidade li a{
+	width:300px;
+	padding:5px;
+ }
+ 
+
+.menuD a {
+	width:270px;
+	height: auto;
+	display: block;
+	line-height: 2;
+	text-align: left;
+	text-decoration: none;
+	color: #fff;
+	height:auto;
+	padding:4px 3px 4px 3px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#333;
+	clear:left;
+	
+	
+ }
+.menuD a:hover {
+	width:265px;
+	height: auto;
+	text-decoration: none;
+	background:#e5e5e5;
+	color:#000;
+	clear:left;
+ }
+ 
+
+.menuD li ul {
+	width:270px;
+	height:auto;
+	position: absolute;
+	left: -1000em;
+	padding:0 0 0 0;
+	margin: 0;
+	z-index:9000;
+	*z-index:100000;
+	font-weight:normal;
+	background:#f4f4f4;
+	float:left;
+	font-size:11px;
+	border:1px solid #ccc;
+ }
+ 
+.menuD li ul li{
+border:none;	
+}
+
+
+.divisao{
+	width:auto;
+	border:none;
+	float:left;
+	clear:left;
+	
+	
+}
+
+
+/* SUB MENU INTERNAS */
+
+.SubMenuInternas, .SubMenuInternas ul {
+	padding:4px 0 4px 7px;
+	list-style: none;
+	font: bold 12px Verdana, Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 17px 0 0 0;
+ }
+ 
+.SubMenuInternas li {
+	width:250px;
+	height:35px;
+	float: left;
+	border:1px dotted #ccc;
+	border-bottom:2px solid #ccc;
+	color:#000;
+	background:#f4f4f4;
+		
+	
+ }
+ 
+.SubMenuInternas a.arrow{
+	width:250px;
+	font-weight:bold;
+	background: url(img/arrow_sub_menu.png) 230px  no-repeat;
+	
+ }
+ 
+.SubMenuInternas a.arrow:hover{
+	width:250px;
+	font-weight:bold;
+	background: url(img/arrow_sub_menu.png) 230px  no-repeat;
+ }
+ 
+
+.SubMenuInternas a {
+	width:240px;
+	height: auto;
+	display: block;
+	line-height: 2;
+	text-align: left;
+	text-decoration: none;
+	color: #fff;
+	padding:7px 3px 7px 3px;
+	margin:0;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#333;
+	float:left;
+	
+	
+ }
+.SubMenuInternas a:hover {
+	width:243px;
+	height: auto;
+	text-decoration: none;
+	background:#e5e5e5;
+	color:#000;
+ }
+ 
+
+.SubMenuInternas li ul {
+	width:250px;
+	position: absolute;
+	padding:0 0 10px 0;
+	margin:36px 0 0 0;
+	*margin:-2px 0 0 -125px;
+	z-index:9000;
+	*z-index:100000;
+	font-weight:normal;
+	background:#f4f4f4;
+	float:left;
+	clear:left;
+	font-size:11px;   
+	border:1px solid #ccc;
+ }
+ 
+.SubMenuInternas li ul li{ 
+	border:none;
+	background:none; 
+}
+
+
+.divisao{
+	width:auto;
+	border:none;
+	float:left;
+	clear:left;
+}
+
+/* FIM */
+
+/* [DROPDOWN - FINANCEIRO] 
+
+
+#container #in-container #content .financeiro ul.menu{
+	width:auto;
+	height:auto;
+	float:left;
+	*float:left;
+	color:#006699;
+	display:inline;
+	padding:0 0 10px 0;
+	font-family:Arial, Helvetica, sans-serif;
+	
+	}
+	
+
+#container #in-container #content .financeiro ul.menu li{	
+	width:auto;
+	height:auto;
+
+	border:1px dotted #ccc;
+	float:left;
+	
+	display:inline;
+	list-style-type:none;
+	background:#fff;
+	font-weight:normal;
+	position: relative;
+	color:#000;
+	
+	
+}
+
+#container #in-container #content .financeiro ul.menu li:hover ul{
+	width:500px;
+	display: inline;
+	left:0;
+	top:33px;
+	*position:absolute;
+	border:1px solid #ccc;
+	background:#f9f9f9;
+	list-style:decimal;
+	
+}
+
+#container #in-container #content .financeiro ul.menu li ul {
+	width:500px;
+	height:auto;
+	position: absolute;
+	left:0;
+	top:60px;
+	display:none;
+	z-index:9000;
+	*z-index:100000;
+	padding:0;
+
+}
+
+#container #in-container #content .financeiro ul.menu li ul li {
+	width:230px;
+	display:inline;
+	float:left;
+	border:none;
+	background:#f9f9f9;
+}
+
+
+
+#container #in-container #content .financeiro ul.menu li a{
+	width:230px;
+	height:auto;
+	padding:4px 3px 4px 3px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#333;
+	float:left;
+	font-size:90%;
+	text-decoration:none;
+}
+
+#container #in-container #content .financeiro ul.menu li a:hover{
+	width:223px;
+	height:auto;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#666666;
+	float:left;
+	font-size:90%;
+	padding:4px 3px 4px 3px;
+	background:#f9f9f9;
+	text-decoration:none;
+	
+}
+
+#container #in-container #content .financeiro ul.menu li a.arrow{
+	width:150px;
+	height:20px;
+	float:left;
+	background: url(img/arrow_sub_menu.png) 140px #f4f4f4 no-repeat;
+	cursor:pointer;
+	padding:7px 3px 7px 7px;
+}
+
+
+#container #in-container #content .financeiro ul.menu li a:hover.arrow{
+	width:150px;
+	height:20px;
+	float:left;
+	background: url(img/arrow_sub_menu.png) 140px  #fff no-repeat;
+	padding:7px 3px 7px 7px;
+
+}
+
+/*[ MENU FINANCEIRO - PÁGINA INTERNA ]*/
+
+
+#container #in-container #content ul.menuFinanceiro{
+	width:250px;
+	height:auto;
+	margin:7px;
+	float:left;
+	color:#006699;
+	padding:0 0 10px 0;
+	font-family:Arial, Helvetica, sans-serif;
+	z-index:1;
+	}
+	
+
+#container #in-container  ul.menuFinanceiro li{	
+	width:240px;
+	height:auto;
+	padding:1px;
+	border-top:1px dotted #fff;
+	border-bottom:1px dotted #ccc;
+	float:left;
+	list-style-type:none;
+	background:#eee;
+	font-weight:normal;
+	
+	
+}
+
+#container #in-container  ul.menuFinanceiro li:hover ul{
+	width:240px;
+	display: block;
+	left:240px;
+	*position:absolute;
+	
+
+}
+
+#container #in-container  ul.menuFinanceiro li ul {
+	width:400px;
+	height:auto;
+	position: absolute;
+	top:0;
+	display:none;
+	z-index:9000;
+	*z-index:100000;
+
+}
+
+#container #in-container  ul.menuFinanceiro li ul li {
+	background:#f4f4f4;
+	border-left:1px solid #e5e5e5;
+
+}
+
+
+#container #in-container  ul.menuFinanceiro li.titleFinanceiro{
+	margin:0 0 10px 0;
+	border:none;
+	background:transparent;
+}
+
+#container #in-container  ul.menuFinanceiro li.titleFinanceiro img{
+	float:left;
+}
+
+#container #in-container  ul.menuFinanceiro li.titleFinanceiro h2{
+	font-size:20px;
+	color:#99cc00;
+	float:left;
+	margin: 9px 0 0 5px;
+}
+
+
+#container #in-container  ul.menuFinanceiro li a{
+	width:230px;
+	height:auto;
+	padding:12px 5px 12px 5px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#333;
+	float:left;
+	font-size:12px;
+	text-decoration:none;
+	display:block;
+}
+
+#container #in-container  ul.menuFinanceiro li a:hover{
+	width:230px;
+	height:auto;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#666666;
+	float:left;
+	font-size:12px;
+	padding:12px 5px 12px 5px;
+	background:#f9f9f9;
+	text-decoration:none;
+	
+}
+
+#container #in-container  ul.menuFinanceiro li a.arrow{
+	background: url(img/arrow_sub_menu.png) 220px no-repeat;
+}
+
+
+#container #in-container  ul.menuFinanceiro li a:hover.arrow{
+	background: url(img/arrow_sub_menu.png) 220px no-repeat;
+
+}
+
+
+
+
+
+
+
+/* 	SISTEMAS - VERTICAL */
+
+
+#container #in-container #content ul.menuSistemas{
+	width:250px;
+	height:auto;
+	margin:7px;
+	float:left;
+	color:#006699;
+	padding:0 0 10px 0;
+	font-family:Arial, Helvetica, sans-serif;
+	z-index:1;
+	}
+	
+
+#container #in-container  ul.menuSistemas li{	
+	width:240px;
+	height:auto;
+	padding:1px;
+	border-top:1px dotted #fff;
+	border-bottom:1px dotted #ccc;
+	float:left;
+	list-style-type:none;
+	background:#eee;
+	font-weight:normal;
+	
+	
+}
+
+#container #in-container  ul.menuSistemas li:hover ul{
+	width:240px;
+	display: block;
+	left:240px;
+	*position:absolute;
+	
+
+}
+
+#container #in-container  ul.menuSistemas li ul {
+	width:400px;
+	height:auto;
+	position: absolute;
+	top:0;
+	display:none;
+	z-index:9000;
+	*z-index:100000;
+
+}
+
+#container #in-container  ul.menuSistemas li ul li {
+	background:#f4f4f4;
+	border-left:1px solid #e5e5e5;
+
+}
+
+
+#container #in-container  ul.menuSistemas li.titleSistemas {
+	margin:0 0 10px 0;
+	border:none;
+	background:transparent;
+}
+
+#container #in-container  ul.menuSistemas li.titleSistemas img{
+	float:left;
+}
+
+#container #in-container  ul.menuSistemas li.titleSistemas h2{
+	font-size:20px;
+	color:#00ccff;
+	float:left;
+	margin: 9px 0 0 5px;
+}
+
+
+#container #in-container  ul.menuSistemas li a{
+	width:230px;
+	height:auto;
+	padding:12px 5px 12px 5px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#333;
+	float:left;
+	font-size:12px;
+	text-decoration:none;
+	display:block;
+}
+
+#container #in-container  ul.menuSistemas li a:hover{
+	width:230px;
+	height:auto;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#666666;
+	float:left;
+	font-size:12px;
+	padding:12px 5px 12px 5px;
+	background:#f9f9f9;
+	text-decoration:none;
+	
+}
+
+#container #in-container  ul.menuSistemas li a.arrow{
+	background: url(img/arrow_sub_menu.png) 220px no-repeat;
+}
+
+
+#container #in-container  ul.menuSistemas li a:hover.arrow{
+	background: url(img/arrow_sub_menu.png) 220px no-repeat;
+
+}
+
+
+/* MENU DROPDOWN */
+
+#container #in-container #content #cssdropdown{
+	float:right;
+}
+
+#container #in-container #content ul.dropdown{
+	width:250px;
+	height:auto;
+	margin:20px 0 0 0;
+	float:left;
+	*float:left;
+	color:#006699;
+	padding:0 0 10px 0;
+	font-family:Arial, Helvetica, sans-serif;
+	}
+	
+
+#container #in-container  ul.dropdown li{	
+	width:240px;
+	height:auto;
+	padding:1px;
+	border-top:1px dotted #fff;
+	border-bottom:1px dotted #ccc;
+	float:left;
+	list-style-type:none;
+	background:#eee;
+	font-weight:normal;
+	position: relative;	
+}
+
+#container #in-container  ul.dropdown li:hover ul{
+	width:240px;
+	display: block;
+	margin-top:45px;
+	*position:absolute;
+}
+
+#container #in-container  ul.dropdown li ul {
+	width:400px;
+	height:auto;
+	position: absolute;
+	top:43;
+	left:0;
+	display:none;
+	z-index:9000;
+	*z-index:100000;
+}
+
+#container #in-container  ul.dropdown li ul li {
+	background:#f4f4f4;
+	border-left:1px solid #e5e5e5;
+
+}
+
+
+#container #in-container  ul.dropdown li.titleAcademico{
+	margin:0 0 10px 0;	
+	border:none;
+	background:transparent;
+	
+}
+
+#container #in-container  ul.dropdown li.titleAcademico img{
+	float:left;
+}
+
+#container #in-container  ul.dropdown li.titleAcademico h2{
+	font-size:20px;
+	float:left;
+	margin: 9px 0 0 5px;
+}
+
+
+
+
+#container #in-container  ul.dropdown li a{
+	width:230px;
+	height:auto;
+	padding:12px 5px 12px 5px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#333;
+	float:left;
+	text-align:left;
+	font-size:12px;
+	text-decoration:none;
+	display:block;
+}
+
+#container #in-container  ul.dropdown li a:hover{
+	width:230px;
+	height:auto;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#666666;
+	float:left;
+	font-size:12px;
+	padding:12px 5px 12px 5px;
+	background:#f9f9f9;
+	text-decoration:none;
+	
+}
+
+#container #in-container  ul.dropdown li.menuHeader{
+	width:240px;
+	height:auto;
+	padding:1px;
+	border-top:1px dotted #fff;
+	border-bottom:1px dotted #ccc;
+	float:left;
+	list-style-type:none;
+	background:#006699;
+	font-weight:normal;
+	position: relative;	
+	
+}
+
+#container #in-container  ul.dropdown li.menuHeader a.arrow{
+	background: url(img/arrow_submenu_down.png) 220px no-repeat;
+	font-size:17px;
+	color:#ffcc00;
+}
+
+.detalhes{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #003366;
+	text-decoration: none;
+	font-weight: bold;
+}
+.textoVerdanaAzul1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #003399;
+
+}
+.textoVerdanaBold {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #000000;
+}
