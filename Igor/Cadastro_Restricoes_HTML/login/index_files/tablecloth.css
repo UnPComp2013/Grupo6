@@ -1,0 +1,85 @@
+/* 
+
+	TableCloth	
+	by Alen Grakalic, brought to you by cssglobe.com
+	
+*/
+
+
+/* TABELAS PERFIL NEE */ 
+
+table.solicitacao{
+	width:100%;
+	height:auto;
+	border-collapse:collapse;
+	font-size:11px;
+	float:left;
+	clear:left;
+	margin-bottom:25px;
+}
+
+
+table.solicitacao, td{
+	font:100% Verdana;
+	height:20px;
+	color:#666666;
+	font-size:12px;
+	font-weight:normal;
+}
+
+table.solicitacao tr td a {
+	border:0;
+}
+
+table.solicitacao tr td a:hover{
+	
+}
+
+table.solicitacao tr{
+	height:20px;	
+}
+
+
+table.solicitacao tr th.cabecalho img{
+	margin-top:-10px;
+	float:left;
+}
+
+
+
+table.solicitacao  th {
+	text-align:left;
+	padding:9px;
+	height:20px;
+	background-color:#eee;
+	border-bottom:2px solid #ccc;
+	border-top: 1px solid #e2e2e2;
+	border-right: 1px solid #e2e2e2;
+	border-left: 1px solid #e5e5e5;
+	color:#333;
+	font-size:12px;
+	font-weight:bold;}
+	
+table.solicitacao td {text-align:left;padding:9px;font-size:11px;border-top: 1px solid #fff;border-bottom: 1px solid #e5e5e5;text-transform:capitalize;font-weight:normal;}
+
+table.solicitacao td img{	
+	border:none;
+}
+
+/* tablecloth styles */
+
+
+table.solicitacao tr.even td{background:#f4f4f4;height:20px;}
+table.solicitacao tr.odd td{background:#fff;height:20px;}
+
+
+/*
+th.over, tr.even th.over, tr.odd th.over{background:#4a98af;}
+th.down, tr.even th.down, tr.odd th.down{background:#bce774;}
+th.selected, tr.even th.selected, tr.odd th.selected{}
+*/
+
+/* use this if you want to apply different styleing to empty table cells*/
+table.solicitacao td.empty, tr.odd td.empty, tr.even td.empty{background:#fff;}
+
+
