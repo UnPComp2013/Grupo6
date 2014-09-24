@@ -10,10 +10,12 @@ AulaYouTube::AulaYouTube(QWidget *parent) :
 
     this->CriaAcao();
     this->CriaMenu();
-
+    
+    //Barra de status.
     statusBar()->showMessage(tr("!!!Bom dia!!!"));
     statusBar()->setSizeGripEnabled(false);
-
+    
+    //nomeando os componentes.
     ui->pushButton->setText("Confirma");
     ui->label->setText("Senha");
     ui->label_2->setText("Login");
@@ -27,7 +29,7 @@ AulaYouTube::~AulaYouTube()
     delete AcaoSair;
     delete MenuArquivo;
 }
-
+//função que cria um sub-arquivo dentro da barra de menu.
 void AulaYouTube::CriaAcao()
 {
     AcaoSair = new QAction(QString("&Sair"), this);
@@ -36,13 +38,14 @@ void AulaYouTube::CriaAcao()
     connect(AcaoSair,SIGNAL(triggered()), this, SLOT(Sair()));
 
 }
+//função que cria a barra de menu Arquivo
 void AulaYouTube::CriaMenu()
 {
     MenuArquivo= menuBar()->addMenu( QString("&Arquivo"));
     MenuArquivo->addAction(AcaoSair);
 
 }
-
+//função que implementa a saida se pelo menu barra
 void AulaYouTube::Sair()
 {
     close();
