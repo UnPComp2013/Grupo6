@@ -1,13 +1,13 @@
 #ifndef CONSULTA_H
 #define CONSULTA_H
 
-#include <QMainWindow>
+#include <QDialog>
 
 namespace Ui {
 class consulta;
 }
 
-class consulta : public QMainWindow
+class consulta : public QDialog
 {
     Q_OBJECT
 

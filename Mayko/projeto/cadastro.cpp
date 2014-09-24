@@ -1,7 +1,6 @@
 #include "cadastro.h"
 #include "ui_cadastro.h"
 
-
 cadastro::cadastro(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::cadastro)
@@ -13,4 +12,3 @@ cadastro::~cadastro()
 {
     delete ui;
 }
-

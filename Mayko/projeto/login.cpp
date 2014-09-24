@@ -5,18 +5,22 @@ Login::Login(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Login)
 {
-
     ui->setupUi(this);
 
     mydb= QSqlDatabase::addDatabase("QSQLITE");
     mydb.setDatabaseName("C:/Users/DIEGO/Desktop/douglas/db/database.db");
 
     if(!mydb.open())
-       ui->label->setText("Falha ao abrir a database");
+        ui->label->setText("Falha ao abrir a database");
 
     else
-       ui->label->setText("conectado....");
+        ui->label->setText("conectado...");
 
+}
+
+Login::~Login()
+{
+    delete ui;
 }
 
 void Login::on_btn_ok_clicked()
@@ -34,7 +38,7 @@ void Login::on_btn_ok_clicked()
 
     if(qry.exec("SELECT *  FROM TBL_projeto WHERE Login='"+login +"'AND Senha='"+senha +"'"))
     {
-        int count;
+        int count=0;
         while (qry.next())
         {
             count++;
@@ -42,14 +46,9 @@ void Login::on_btn_ok_clicked()
         if(count==1)
             ui->label->setText("login e senha estão corretas");
         if(count>1)
-            ui->label->setText("dupilicate login e senha");
+            ui->label->setText("duplicate login e senha");
         if(count<1)
             ui->label->setText("login e senha não estão corretas");
 
     }
 }
-Login::~Login()
-{
-    delete ui;
-}
-

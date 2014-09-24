@@ -3,7 +3,6 @@
 
 #include <QDialog>
 
-
 namespace Ui {
 class cadastro;
 }
@@ -16,12 +15,8 @@ public:
     explicit cadastro(QWidget *parent = 0);
     ~cadastro();
 
-private slots:
-
-
 private:
     Ui::cadastro *ui;
-
 };
 
 #endif // CADASTRO_H
