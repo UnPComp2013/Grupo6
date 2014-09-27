@@ -7,6 +7,8 @@ Login::Login(QWidget *parent) :
 {
     ui->setupUi(this);
 
+
+
     mydb= QSqlDatabase::addDatabase("QSQLITE");
     mydb.setDatabaseName("C:/Users/DIEGO/Desktop/douglas/db/database.db");
 
@@ -44,7 +46,9 @@ void Login::on_btn_ok_clicked()
             count++;
         }
         if(count==1)
-            ui->label->setText("login e senha estão corretas");
+        {
+
+        }
         if(count>1)
             ui->label->setText("duplicate login e senha");
         if(count<1)
