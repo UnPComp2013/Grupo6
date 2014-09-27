@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>652</width>
-    <height>371</height>
+    <width>530</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,6 +22,13 @@
      <height>341</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
    </property>
@@ -33,7 +40,7 @@
      <rect>
       <x>20</x>
       <y>80</y>
-      <width>581</width>
+      <width>481</width>
       <height>192</height>
      </rect>
     </property>
@@ -43,7 +50,7 @@
      <rect>
       <x>30</x>
       <y>30</y>
-      <width>81</width>
+      <width>121</width>
       <height>31</height>
      </rect>
     </property>
@@ -54,7 +61,7 @@
    <widget class="QPushButton" name="btn_volta">
     <property name="geometry">
      <rect>
-      <x>500</x>
+      <x>410</x>
       <y>300</y>
       <width>75</width>
       <height>23</height>
