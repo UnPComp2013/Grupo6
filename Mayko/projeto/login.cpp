@@ -6,6 +6,7 @@ Login::Login(QWidget *parent) :
     ui(new Ui::Login)
 {
     ui->setupUi(this);
+
     QPixmap pix("C:/Users/DIEGO/Pictures/lp_logo_unp.png");
     ui->label_pic->setPixmap(pix);
 
@@ -47,7 +48,11 @@ void Login::on_btn_ok_clicked()
         }
         if(count==1)
         {
-
+            ui->label->setText("login e senha estão corretas");
+            this->hide();
+            menu Menu;
+            Menu.setModal(true);
+            Menu.exec();
         }
         if(count>1)
             ui->label->setText("duplicate login e senha");
