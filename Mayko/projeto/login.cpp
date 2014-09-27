@@ -6,8 +6,8 @@ Login::Login(QWidget *parent) :
     ui(new Ui::Login)
 {
     ui->setupUi(this);
-
-
+    QPixmap pix("C:/Users/DIEGO/Pictures/lp_logo_unp.png");
+    ui->label_pic->setPixmap(pix);
 
     mydb= QSqlDatabase::addDatabase("QSQLITE");
     mydb.setDatabaseName("C:/Users/DIEGO/Desktop/douglas/db/database.db");
