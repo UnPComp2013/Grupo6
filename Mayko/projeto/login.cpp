@@ -7,13 +7,7 @@ Login::Login(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QPixmap pix("C:/Users/DIEGO/Pictures/lp_logo_unp.png");
-    ui->label_pic->setPixmap(pix);
-
-    mydb= QSqlDatabase::addDatabase("QSQLITE");
-    mydb.setDatabaseName("C:/Users/DIEGO/Desktop/douglas/db/database.db");
-
-    if(!mydb.open())
+    if(!connOpen())
         ui->label->setText("Falha ao abrir a database");
 
     else
@@ -37,9 +31,12 @@ void Login::on_btn_ok_clicked()
         qDebug()<<"Failed to open the database";
         return;
     }
-    QSqlQuery qry;
 
-    if(qry.exec("SELECT *  FROM TBL_projeto WHERE Login='"+login +"'AND Senha='"+senha +"'"))
+    connOpen();
+    QSqlQuery qry;
+    qry.prepare("SELECT *  FROM TBL_projeto WHERE Login='"+login +"'AND Senha='"+senha +"'");
+
+    if(qry.exec())
     {
         int count=0;
         while (qry.next())
@@ -49,6 +46,7 @@ void Login::on_btn_ok_clicked()
         if(count==1)
         {
             ui->label->setText("login e senha estão corretas");
+            connClose();
             this->hide();
             menu Menu;
             Menu.setModal(true);

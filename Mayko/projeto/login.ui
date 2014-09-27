@@ -112,10 +112,13 @@
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
     <property name="textFormat">
      <enum>Qt::PlainText</enum>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../../../sqlite_DB/Imagem/lp_logo_unp.png</pixmap>
     </property>
    </widget>
   </widget>
