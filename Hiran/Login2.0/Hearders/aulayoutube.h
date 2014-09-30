@@ -18,7 +18,11 @@ public:
         mydb.close();
         mydb.removeDatabase(QSqlDatabase::defaultConnection);
                      }
-
+    bool connOpen()
+    {
+        mydb =QSqlDatabase::addDatabase("QSQLITE");
+        mydb.setDatabaseName("C:/Users/DIEGO/Desktop/hiran/db/database.db");
+    }
 
 public slots:
     void Sair();
