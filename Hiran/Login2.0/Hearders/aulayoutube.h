@@ -39,6 +39,9 @@ public:
 public slots:
     void Sair();
     void Confirma();
+    
+private slots:
+    void on_btn_ok_clicked();
 
 public:
     explicit AulaYouTube(QWidget *parent = 0);
