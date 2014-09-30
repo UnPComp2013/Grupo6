@@ -54,6 +54,41 @@ void AulaYouTube::Sair()
 
 void AulaYouTube::Confirma()
 {
+    QString login, senha;
+    login=ui->ln_login->text();
+    senha=ui->ln_senha->text();
 
+    if(!mydb.isOpen())
+    {
+        qDebug()<<"Failed to open the database";
+        return;
+    }
+
+    connOpen();
+    QSqlQuery qry;
+    qry.prepare("SELECT *  FROM TBL_projeto WHERE Login='"+login +"'AND Senha='"+senha +"'");
+
+    if(qry.exec())
+    {
+        int count=0;
+        while (qry.next())
+        {
+            count++;
+        }
+        if(count==1)
+        {
+            ui->label->setText("login e senha estão corretas");
+            connClose();
+            this->hide();
+            menu Menu;
+            Menu.setModal(true);
+            Menu.exec();
+        }
+        if(count>1)
+            ui->label->setText("duplicate login e senha");
+        if(count<1)
+            ui->label->setText("login e senha não estão corretas");
+
+    }
 }
 
