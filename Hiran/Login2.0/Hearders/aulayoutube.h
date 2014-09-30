@@ -10,6 +10,16 @@ class AulaYouTube;
 class AulaYouTube : public QMainWindow
 {
     Q_OBJECT
+    
+public:
+    QSqlDatabase mydb;
+
+    void connClose(){
+        mydb.close();
+        mydb.removeDatabase(QSqlDatabase::defaultConnection);
+                     }
+
+
 public slots:
     void Sair();
     void Confirma();
