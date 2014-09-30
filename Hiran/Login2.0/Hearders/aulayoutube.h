@@ -22,6 +22,18 @@ public:
     {
         mydb =QSqlDatabase::addDatabase("QSQLITE");
         mydb.setDatabaseName("C:/Users/DIEGO/Desktop/hiran/db/database.db");
+        
+        if(!mydb.open())
+        {
+            qDebug()<<("Falha ao abrir a database");
+            return false;
+        }
+
+        else
+        {
+            qDebug()<<("conectado...");
+            return true;
+        }
     }
 
 public slots:
