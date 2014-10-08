@@ -1,5 +1,6 @@
 #include "login.h"
 #include "ui_login.h"
+#include "menu.h"
 
 Login::Login(QWidget *parent) :
     QMainWindow(parent),
@@ -12,7 +13,6 @@ Login::Login(QWidget *parent) :
 
     else
         ui->label->setText("conectado...");
-
 }
 
 Login::~Login()
@@ -26,7 +26,7 @@ void Login::on_btn_ok_clicked()
     login=ui->ln_login->text();
     senha=ui->ln_senha->text();
 
-    if(!mydb.isOpen())
+    if(!connOpen())
     {
         qDebug()<<"Failed to open the database";
         return;
@@ -50,7 +50,7 @@ void Login::on_btn_ok_clicked()
             this->hide();
             menu Menu;
             Menu.setModal(true);
-            Menu.exec();
+           Menu.exec();
         }
         if(count>1)
             ui->label->setText("duplicate login e senha");
