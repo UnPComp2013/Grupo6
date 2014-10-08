@@ -45,11 +45,11 @@ void cadastro::on_btn_confirma_clicked()
 
     conn.connOpen();
     QSqlQuery qry;
-    qry.prepare("insert into TBL_projeto (curso, email, nome, senha, usuario) values ('"+curso+"','"+email+"','"+nome+"','"+senha+"','"+usuario+"')");
+    qry.prepare("insert into TBL_projeto (curso, email, nome, senha, Login) values ('"+curso+"','"+email+"','"+nome+"','"+senha+"','"+usuario+"')");
 
     if(qry.exec())
     {
-      QMessageBox::critical(this, tr("Salvando"), tr("Salvo"));
+      QMessageBox::critical(this, tr("Salvando"), tr("Salvo com sucesso"));
       conn.connClose();
     }
     else
