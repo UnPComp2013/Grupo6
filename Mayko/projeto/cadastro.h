@@ -2,6 +2,8 @@
 #define CADASTRO_H
 
 #include <QDialog>
+#include "login.h"
+#include <QMessageBox>
 
 namespace Ui {
 class cadastro;
@@ -14,6 +16,9 @@ class cadastro : public QDialog
 public:
     explicit cadastro(QWidget *parent = 0);
     ~cadastro();
+
+private slots:
+    void on_btn_confirma_clicked();
 
 private:
     Ui::cadastro *ui;
