@@ -5,7 +5,8 @@
 #include <QtSql>
 #include <QtDebug>
 #include <QFileInfo>
-#include "menu.h"
+
+
 
 namespace Ui {
 class Login;
@@ -18,10 +19,11 @@ class Login : public QMainWindow
 public:
     QSqlDatabase mydb;
 
-    void connClose(){
+    void connClose()
+    {
         mydb.close();
         mydb.removeDatabase(QSqlDatabase::defaultConnection);
-                     }
+    }
 
     bool connOpen()
     {
@@ -50,6 +52,7 @@ private slots:
 
 private:
     Ui::Login *ui;
+
 
 };
 
