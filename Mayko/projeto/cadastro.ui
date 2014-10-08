@@ -27,19 +27,9 @@
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QPushButton" name="btn_Confirma">
-      <property name="styleSheet">
-       <string notr="true">QLabel { border-color: red }</string>
-      </property>
+     <widget class="QPushButton" name="btn_confirma">
       <property name="text">
        <string>Confirma</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="btn_Cancelar">
-      <property name="text">
-       <string>Cancelar</string>
       </property>
      </widget>
     </item>
@@ -120,7 +110,7 @@
      <string>Email:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="ln_nome">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -130,7 +120,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="ln_email">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -159,7 +149,7 @@
      <string>Curso:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="ln_curso">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -207,7 +197,7 @@
      <string>Senha: </string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="ln_usuario">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -217,7 +207,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_5">
+   <widget class="QLineEdit" name="ln_senha">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -227,6 +217,19 @@
      </rect>
     </property>
    </widget>
+  </widget>
+  <widget class="QLabel" name="lb_sec_status">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>370</y>
+     <width>241</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
   </widget>
  </widget>
  <resources/>
