@@ -6,6 +6,10 @@ Login::Login(QWidget *parent) :
     ui(new Ui::Login)
 {
     ui->setupUi(this);
+    
+    ui->pushButton->setText("Confirma");
+    ui->label_3->setText("Senha");
+    ui->label_2->setText("Login");
   
       if(!connOpen())
           ui->label->setText("Falha ao abrir a database");
