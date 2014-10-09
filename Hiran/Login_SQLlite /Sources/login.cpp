@@ -34,6 +34,24 @@ void Login::on_btn_ok_clicked()
     QSqlQuery qry;
     qry.prepare("SELECT *  FROM TBL_projeto WHERE Login='"+login +"'AND Senha='"+senha +"'");
 
-  
+    if(qry.exec())
+    {
+        int count=0;
+        while (qry.next())
+        {
+            count++;
+        }
+        if(count==1)
+        {
+            ui->label->setText("login e senha estão corretas");
+            connClose();
+            this->hide();
+            menu Menu;
+            Menu.setModal(true);
+           Menu.exec();
+        }
+     
+
+    }
 
 }
