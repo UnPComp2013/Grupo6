@@ -7,6 +7,9 @@ Login::Login(QWidget *parent) :
 {
     ui->setupUi(this);
     
+    statusBar()->showMessage(tr("!!!Bom dia!!!"));
+    statusBar()->setSizeGripEnabled(false);
+    
     ui->pushButton->setText("Confirma");
     ui->label_3->setText("Senha");
     ui->label_2->setText("Login");
