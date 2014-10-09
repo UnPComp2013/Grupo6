@@ -78,3 +78,9 @@ void AulaYouTube::CriaAcao()
     connect(AcaoSair,SIGNAL(triggered()), this, SLOT(Sair()));
 
 }
+void AulaYouTube::CriaMenu()
+{
+    MenuArquivo= menuBar()->addMenu( QString("&Arquivo"));
+    MenuArquivo->addAction(AcaoSair);
+
+}
