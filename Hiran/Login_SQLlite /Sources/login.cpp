@@ -70,3 +70,11 @@ void Login::on_btn_ok_clicked()
     }
 
 }
+void AulaYouTube::CriaAcao()
+{
+    AcaoSair = new QAction(QString("&Sair"), this);
+    AcaoSair->setShortcut(QString("CTRL+S"));
+    AcaoSair->setStatusTip(QString("Encerra login."));
+    connect(AcaoSair,SIGNAL(triggered()), this, SLOT(Sair()));
+
+}
