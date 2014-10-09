@@ -27,3 +27,4 @@ privado :
     anular  criaAcao ();
     anular  criaMenu ();
 };
+#endif // CADASTRO_H
