@@ -22,4 +22,8 @@ público :
 
 privado :
     Ui :: Cadastro  * ui ;
-}
+    QAction  * acaoSair ;
+    QMenu  * menuArquivo ;
+    anular  criaAcao ();
+    anular  criaMenu ();
+};
