@@ -7,6 +7,9 @@ Login::Login(QWidget *parent) :
 {
     ui->setupUi(this);
     
+    this->CriaAcao();
+    this->CriaMenu();
+    
     statusBar()->showMessage(tr("!!!Bom dia!!!"));
     statusBar()->setSizeGripEnabled(false);
     
