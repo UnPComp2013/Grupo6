@@ -21,6 +21,8 @@ Login::Login(QWidget *parent) :
 Login::~Login()
 {
     delete ui;
+    delete AcaoSair;
+    delete MenuArquivo;
 }
 void Login::on_btn_ok_clicked()
 {
