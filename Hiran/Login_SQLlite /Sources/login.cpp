@@ -29,5 +29,11 @@ void Login::on_btn_ok_clicked()
         qDebug()<<"Failed to open the database";
         return;
     }
+    
+    connOpen();
+    QSqlQuery qry;
+    qry.prepare("SELECT *  FROM TBL_projeto WHERE Login='"+login +"'AND Senha='"+senha +"'");
+
+  
 
 }
