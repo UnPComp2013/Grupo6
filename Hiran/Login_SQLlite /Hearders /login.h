@@ -40,14 +40,23 @@ public:
             return true;
         }       
     }
+    
+public slots:
+void Sair();
+void Confirma();
  
 public:
         explicit Login(QWidget *parent = 0);
     ~Login();
+    
 
 private slots:
     void on_btn_ok_clicked();
     
 private:
-    Ui::Login *ui;
+    Ui::AulaYouTube *ui;
+    QAction *AcaoSair;
+    QMenu *MenuArquivo;
+    void CriaAcao();
+    void CriaMenu();
 };
