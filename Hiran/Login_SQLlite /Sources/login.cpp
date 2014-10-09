@@ -84,3 +84,8 @@ void AulaYouTube::CriaMenu()
     MenuArquivo->addAction(AcaoSair);
 
 }
+void AulaYouTube::Sair()
+{
+    close();
+
+}
