@@ -50,7 +50,10 @@ void Login::on_btn_ok_clicked()
             Menu.setModal(true);
            Menu.exec();
         }
-     
+        if(count>1)
+            ui->label->setText("duplicate login e senha");
+        if(count<1)
+            ui->label->setText("login e senha não estão corretas");
 
     }
 
