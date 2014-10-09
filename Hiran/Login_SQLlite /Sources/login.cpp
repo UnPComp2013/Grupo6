@@ -18,3 +18,16 @@ Login::~Login()
 {
     delete ui;
 }
+void Login::on_btn_ok_clicked()
+{
+    QString login, senha;
+    login=ui->ln_login->text();
+    senha=ui->ln_senha->text();
+
+    if(!connOpen())
+    {
+        qDebug()<<"Failed to open the database";
+        return;
+    }
+
+}
