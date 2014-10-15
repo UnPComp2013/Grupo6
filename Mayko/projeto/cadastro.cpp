@@ -1,3 +1,4 @@
+
 #include "cadastro.h"
 #include "ui_cadastro.h"
 
@@ -36,6 +37,7 @@ void cadastro::on_btn_confirma_clicked()
     email = ui->ln_email->text();
     nome = ui->ln_nome->text();
     usuario = ui->ln_usuario->text();
+    senha = ui->ln_senha->text();
 
     if(!conn.connOpen())
     {
@@ -45,15 +47,18 @@ void cadastro::on_btn_confirma_clicked()
 
     conn.connOpen();
     QSqlQuery qry;
-    qry.prepare("insert into TBL_projeto (curso, email, nome, senha, Login) values ('"+curso+"','"+email+"','"+nome+"','"+senha+"','"+usuario+"')");
+    qry.prepare("insert into TBL_projeto (curso, email, nome, Senha, Login) values ('"+curso+"','"+email+"','"+nome+"','"+senha+"','"+usuario+"')");
 
     if(qry.exec())
     {
-      QMessageBox::critical(this, tr("Salvando"), tr("Salvo com sucesso"));
+      QMessageBox::information(this, tr("Salvando"), tr("Salvo com sucesso"));
       conn.connClose();
+      this->hide();
     }
     else
     {
         QMessageBox::critical(this,tr("Error::"),qry.lastError().text());
     }
 }
+
+
