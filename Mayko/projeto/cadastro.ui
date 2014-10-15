@@ -16,25 +16,6 @@
   <property name="styleSheet">
    <string notr="true">QLabel { border-color: red }</string>
   </property>
-  <widget class="QWidget" name="layoutWidget_6">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>370</y>
-     <width>158</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QPushButton" name="btn_confirma">
-      <property name="text">
-       <string>Confirma</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -229,6 +210,32 @@
    </property>
    <property name="text">
     <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_confirma">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>370</y>
+     <width>156</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Confirma</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_update">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>370</y>
+     <width>156</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Atualizar</string>
    </property>
   </widget>
  </widget>
