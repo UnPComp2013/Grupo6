@@ -20,6 +20,8 @@ public:
 private slots:
     void on_btn_confirma_clicked();
 
+    void on_btn_update_clicked();
+
 private:
     Ui::cadastro *ui;
 };
