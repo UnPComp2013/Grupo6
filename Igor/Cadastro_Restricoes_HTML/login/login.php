@@ -18,6 +18,90 @@
 		echo "<p align=center class=infos>Conta não registrada, entre em contado com o administrador</p>";
 	}else 
 	{
-		echo "<p align=center class=infos>Bem Vindo(a), <b>".$login."</b>!</p>";
+		echo "<p style='background-color:black; color:white' align=center class=infos>Bem Vindo(a), <b>".$login."</b>!</p>";
 	}
 ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style>
+		table, td, th {
+			border: 1px solid green;
+		}
+
+		th {
+			background-color: green;
+			color: white;
+		}
+		
+		</style>
+	</head>
+
+<body>
+<h1  >Painel - Professor</h1>
+
+<form name="input" action="submit_resticoes.php" method="get">
+	<table align=center>
+		<tr>
+			<th></th>
+			<th>Segunda</th>
+			<th>Terça</th>
+			<th>Quarta</th>
+			<th>Quinta</th>
+			<th>Sexta</th>
+		</tr>
+		<tr>
+			<td>Primeiro Horário</td>
+			<td><p ><input type="checkbox"  name="1"></p></td>
+			<td ><p ><input type="checkbox"  name="2"></p></td>
+			<td ><p ><input type="checkbox"  name="3"></p></td>
+			<td ><p ><input type="checkbox"  name="4"></p></td>
+			<td ><p ><input type="checkbox"  name="5"></p></td>
+		</tr>
+		<tr>
+			<td>Segundo Horário</td>
+			<td ><p ><input type="checkbox"  name="6"></p></td>
+			<td ><p ><input type="checkbox"  name="7"></p></td>
+			<td ><p ><input type="checkbox"  name="8"></p></td>
+			<td ><p ><input type="checkbox"  name="9"></p></td>
+			<td ><p ><input type="checkbox"  name="10"></p></td>
+		</tr>
+		<tr>
+			<td>Terceiro Horário</td>
+			<td ><p ><input type="checkbox"  name="11"></p></td>
+			<td ><p ><input type="checkbox"  name="12"></p></td>
+			<td ><p ><input type="checkbox"  name="13"></p></td>
+			<td ><p ><input type="checkbox"  name="14"></p></td>
+			<td ><p ><input type="checkbox"  name="15"></p></td>
+		</tr>
+		<tr>
+			<td>Quarto Horário</td>
+			<td ><p ><input type="checkbox"  name="16"></p></td>
+			<td ><p ><input type="checkbox"  name="17"></p></td>
+			<td ><p ><input type="checkbox"  name="18"></p></td>
+			<td ><p ><input type="checkbox"  name="19"></p></td>
+			<td ><p ><input type="checkbox"  name="20"></p></td>
+		</tr>
+		<tr>
+			<td>Quinto Horário</td>
+			<td ><p ><input type="checkbox"  name="21"></p></td>
+			<td ><p ><input type="checkbox"  name="22"></p></td>
+			<td ><p ><input type="checkbox"  name="23"></p></td>
+			<td ><p ><input type="checkbox"  name="24"></p></td>
+			<td ><p ><input type="checkbox"  name="25"></p></td>
+		</tr>
+		<tr>
+			<td>Sexto Horário</td>
+			<td ><p ><input type="checkbox"  name="26"></p></td>
+			<td ><p ><input type="checkbox"  name="27"></p></td>
+			<td ><p ><input type="checkbox"  name="28"></p></td>
+			<td ><p ><input type="checkbox"  name="29"></p></td>
+			<td ><p ><input type="checkbox"  name="30"></p></td>
+		</tr>
+	</table>
+<p ><input type="submit"></p>
+</form>
+
+</body>
+</html>
