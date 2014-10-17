@@ -50,7 +50,7 @@
 <body>
 <h1 align="center" id="title">Painel - Professor</h1>
 
-<form name="input" action="submit_resticoes.php" method="get">
+<form name="input" action="submit_restricoes.php" method="post">
 	<table align=center>
 		<tr>
 			<th></th>
