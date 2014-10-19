@@ -18,7 +18,7 @@
 		echo "<p align=center class=infos>Conta não registrada, entre em contado com o administrador</p>";
 	}else 
 	{
-		echo "<p style='background-color:black; color:white' align=center class=infos>Bem Vindo(a), <b>".$login."</b>!</p>";
+		echo "<div id='title'><div><h1>Painel - Professor</h1></div><div align='right'><h3 id='title' color:white' align=center class=infos>Bem Vindo(a), <b>".$login."</b>!</h3></div></div>";
 	}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -27,16 +27,16 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<style>
 		table, td, th {
-			border: 1px solid green;
+			border: 1px solid blue;
 		}
 
 		th {
-			background-color: green;
+			background-color: blue;
 			color: white;
 		}
 		
 		#title {
-			background-color: black; 
+			background-color: blue; 
 			color:white;
 		}
 		
@@ -48,9 +48,7 @@
 	</head>
 
 <body>
-<h1 align="center" id="title">Painel - Professor</h1>
-
-<form name="input" action="submit_restricoes.php" method="post">
+<form action="submit_restricoes.php" method="post">
 	<table align=center>
 		<tr>
 			<th></th>
