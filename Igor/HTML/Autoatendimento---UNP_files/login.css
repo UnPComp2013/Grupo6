@@ -1,0 +1,239 @@
+*{
+	padding:0;
+	margin:0;
+	}
+
+
+#login{
+	width:345px;
+	height:auto;
+	
+	*width:353px;
+	*height:auto;
+	
+	font-family: arial;
+
+	margin-top:50px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+#ambienteLogin{
+	
+	width:310px;
+	height:230px;
+	
+	*width:320px;
+	*height:240px;
+	
+	font-family: arial;
+	padding:0 18px 15px 15px;
+	
+	color:#66666;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:40px;
+	background: #fff; 
+	
+	text-align:left;
+	clear:both;
+	
+	
+	background: #fff; 
+	border: 1px solid #ccc;
+ 
+}
+	
+
+#ambienteLogin h2{
+font-size:25px;
+margin:10px 17px 10px 0;	
+}
+
+
+#ambienteLogin span{
+float:left;
+padding:0 0 0 22px;
+margin:20px 7px 7px 0;
+}
+
+
+#ambienteLogin span a{
+font-size:12px;
+color:#333;
+text-decoration:none;
+}
+
+#ambienteLogin span a:hover{
+font-size:12px;
+color:#666666;
+text-decoration:none;
+}
+
+#ambienteLogin span.cadastrar{
+width:60px;
+height:auto;
+background:url(/sis_icones/icon_cadastrar.png) 3px no-repeat;
+}
+
+#ambienteLogin span.esqueciSenha{
+width:130px;
+height:auto;
+background:url(/sis_icones/icon_esqueci_senha.png) 3px no-repeat;
+
+}
+
+
+
+label{
+	display:block;
+	font-size:12px;
+	margin:0 0 5px 0;
+	
+	}
+
+label em{
+font-size:11px;
+color:#666666;	
+}
+
+input.half {
+	width: 310px;
+	height: auto;
+	
+	padding:10px 0 10px 5px;
+	
+	border: 1px solid #e1e1e1;
+	background-color: #f9f9f9;
+	color: #666666;
+	font-size: 12px;
+	margin:0 0 7px 0;
+	
+	.width: 315px;
+	.height: 30px;
+	.padding: 12px 0 0 3px;
+	.margin:0;
+	
+	
+}
+
+input[type=submit] {
+	width: auto;
+	height: 34px;
+	font-size: 12px;
+	color: #fff;
+	font-weight: bold;
+	padding: 0 5px 5px 5px;
+	border: none;
+	background-color: #003366;
+	cursor: pointer;
+	float:right;
+	margin:10px 0 0 0;
+
+}
+
+	
+
+/* MENSAGENS*/
+
+.sucesso{
+	text-align:left;
+	font-family:Arial;
+	width:100%;
+	height:auto;
+	float:left;
+	margin-right:auto;
+	margin-left: auto;
+	margin-bottom: 10px;
+	font-size:12px;
+	font-weight:bold;
+	padding:10px 0 10px 0;
+	border:1px dotted #06C;
+	text-shadow:1px 1px 0px #FFF;
+	background:#b6dbf5 url(/documentos/css/img/icon_sucess.png) no-repeat 1% 50%;
+	color: #006600;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius:5px;
+}
+
+.erro{
+	text-align:left;
+	font-family:Arial;
+	width:100%;
+	height:auto;
+	float:left;
+	margin-right:auto;
+	margin-left: auto;
+	margin-bottom: 10px;
+	font-size:12px;
+	font-weight:bold;
+	padding:10px 0 10px 0;
+	border:1px dotted #990000;
+	text-shadow:1px 1px 0px #FFF;
+	background:#ffebe8 url(/documentos/css/img/icon_error.png) no-repeat 1% 50%;
+	color: #990000;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius:5px;
+}
+
+.alert{
+	text-align:left;
+	font-family:Arial;
+	width:100%;
+	height:auto;
+	float:left;
+	margin-right:auto;
+	margin-left: auto;
+	margin-bottom: 10px;
+	font-size:12px;
+	font-weight:bold;
+	padding:10px 0 10px 0;
+	border:1px dotted #FFCC00;
+	text-shadow:1px 1px 0px #FFF;
+	background:#FEF7D8 url(/documentos/css/img/icon_alert.png) no-repeat 1% 50%;
+	color: #DD9704;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius:5px;
+}
+
+.oculto{
+	display:none;
+	float:left;
+}
+
+.erro p, .alert p, .sucesso p{
+	float:left;
+	margin:0 0 0 35px;
+}
+
+.sucesso label, .erro label, .alert label{
+	text-align:left;
+	font-family:Arial;
+	font-size:10px;
+	margin:0 7px 0 0;
+	cursor:pointer;
+	float:right;
+	opacity:0.4;
+	filter:alpha(opacity=40);
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=40)';
+	transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition:	all 0.2s ease-in-out;
+}
+.sucesso label:hover, .erro label:hover, .alert label:hover{
+	text-align:left;
+	font-family:Arial;
+	opacity:1;
+	filter:alpha(opacity=100);
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+	transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition:	all 0.2s ease-in-out;
+}
+/* MENSAGENS* -- FIM -- */
