@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>547</width>
-    <height>300</height>
+    <width>554</width>
+    <height>331</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,13 +19,157 @@
   <property name="windowTitle">
    <string>MainMenu</string>
   </property>
-  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-50</y>
+      <width>601</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="lbl_curso">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>50</y>
+       <width>32</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Curso:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_Nome">
+     <property name="geometry">
+      <rect>
+       <x>22</x>
+       <y>50</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nome:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_turma">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>100</y>
+       <width>33</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Turma:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_nomeCordenador">
+     <property name="geometry">
+      <rect>
+       <x>59</x>
+       <y>50</y>
+       <width>87</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Josevaldo teixeira</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>100</y>
+       <width>69</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>ENC4NA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ECI1TA</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="lbl_nomeCurso">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>50</y>
+       <width>77</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nome do Curso:</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>130</y>
+       <width>541</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <column>
+      <property name="text">
+       <string>Segunda</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Terça</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Quarta</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Quinta</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Sexta</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QCheckBox" name="checkBox">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>70</y>
+       <width>70</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>CheckBox</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>547</width>
+     <width>554</width>
      <height>21</height>
     </rect>
    </property>
@@ -55,34 +199,17 @@
   <action name="actionHorarios">
    <property name="icon">
     <iconset>
-     <normaloff>icons/icon_list-all_circ.png</normaloff>icons/icon_list-all_circ.png</iconset>
+     <normaloff>icons/vis_icon.png</normaloff>icons/vis_icon.png</iconset>
    </property>
    <property name="text">
     <string>Horarios</string>
    </property>
    <property name="toolTip">
-    <string>Ver horários já cadastrados</string>
+    <string>Visualizar horários já cadastrados</string>
    </property>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections>
-  <connection>
-   <sender>mainToolBar</sender>
-   <signal>actionTriggered(QAction*)</signal>
-   <receiver>MainMenu</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>22</x>
-     <y>39</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>37</x>
-     <y>63</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
