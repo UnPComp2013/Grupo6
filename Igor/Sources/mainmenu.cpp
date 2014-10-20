@@ -8,6 +8,7 @@ MainMenu::MainMenu(QWidget *parent) :
     ui->setupUi(this);
 
     connect(ui->actionHorarios, SIGNAL(triggered()), this, SLOT(ativar1()));
+    connect(ui->checkBox, SIGNAL(toggled(bool)), this, SLOT(ativar1()));
 }
 
 MainMenu::~MainMenu()
@@ -17,5 +18,5 @@ MainMenu::~MainMenu()
 
 void MainMenu::ativar1()
 {
-   //
+    MainMenu::show();
 }
