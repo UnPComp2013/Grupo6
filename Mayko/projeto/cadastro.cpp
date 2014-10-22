@@ -1,4 +1,3 @@
-
 #include "cadastro.h"
 #include "ui_cadastro.h"
 
@@ -62,3 +61,8 @@ void cadastro::on_btn_confirma_clicked()
 }
 
 
+
+void cadastro::on_btn_update_clicked()
+{
+
+}
