@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "login.h"
 #include <QMessageBox>
+#include "cadastro.h"
 
 namespace Ui {
 class consulta;
@@ -22,8 +23,11 @@ private slots:
 
     void on_btn_atabela_clicked();
 
+    void on_btn_Cadastro_clicked();
+
 private:
     Ui::consulta *ui;
+    cadastro Cadastro;
 };
 
 #endif // CONSULTA_H
