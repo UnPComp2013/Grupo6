@@ -55,7 +55,7 @@ void consulta::on_btn_atabela_clicked()
     conn.connOpen();
     QSqlQuery *qry = new QSqlQuery(conn.mydb);
 
-    qry->prepare("select * from TBL_projeto");
+    qry->prepare("select rowid,Nome,Email,Curso  from TBL_projeto");
 
     qry->exec();
     Modal->setQuery(*qry);
