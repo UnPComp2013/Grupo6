@@ -15,7 +15,7 @@ consulta::~consulta()
 
 void consulta::on_btn_update_clicked()
 {
-    Login conn;
+    /*Login conn;
     QString curso, email, nome, senha, usuario;
     curso = ui->ln_curso->text();
     email = ui->ln_email->text();
@@ -42,10 +42,15 @@ void consulta::on_btn_update_clicked()
     else
     {
         QMessageBox::critical(this,tr("Error::"),qry.lastError().text());
-    }
+    }*/
 }
 
 void consulta::on_btn_atabela_clicked()
+{
+
+}
+
+void consulta::on_btn_Cadastro_clicked()
 {
 
 }
