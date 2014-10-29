@@ -14,8 +14,9 @@ private:
 public:
     Matrix();
     ~Matrix();
-    Matrix operator& (Matrix Mat);
+    Matrix operator& (Matrix<TipoVariavel> M);
     Matrix operator* (TipoVariavel a);
+    Matrix operator* (Matrix<TipoVariavel> M);
     Matrix(unsigned rows, unsigned cols);
     void    print();
     void    alloc(unsigned rows, unsigned cols);
