@@ -52,7 +52,7 @@ void Matrix<TipoVariavel>::add(unsigned row, unsigned col, TipoVariavel value)
      /*if(row > this->rows || col > this->cols)
      {*/
         Matrix Temp;
-        unsigned MaxRow = row+1, MaxCol = col+1;
+        unsigned MaxRow = row, MaxCol = col;
 
         if(this->rows > MaxRow)
             MaxRow = this->rows;
@@ -102,6 +102,36 @@ Matrix<TipoVariavel> Matrix<TipoVariavel>::operator *(TipoVariavel a)
 }
 
 template<class TipoVariavel>
+Matrix<TipoVariavel> Matrix<TipoVariavel>::operator *(Matrix<TipoVariavel> M)
+{
+    Matrix<TipoVariavel> ret;
+    ret.alloc(this->rows, M.cols);
+
+    for(int i = 0; i < ret.rows; i++)
+        for(int j = 0; j < ret.cols; j++)
+        {
+            TipoVariavel temp = 0;
+            for(int k = 0; k < this->cols; k++)
+                temp += this->Mat[i][k] * M.Mat[k][j];
+            ret.Mat[i][j] = temp;
+        }
+    return ret;
+}
+
+template<class TipoVariavel>
+Matrix<TipoVariavel> Matrix<TipoVariavel>::operator &(Matrix<TipoVariavel> M)
+{
+    Matrix<TipoVariavel> ret;
+    ret.alloc(this->rows, this->cols);
+
+    for(int i = 0; i < this->rows; i++)
+        for(int j = 0; j < this->cols; j++)
+            ret.Mat[i][j] = (bool)this->Mat[i][j] & (bool)M.Mat[i][j];
+
+    return ret;
+}
+
+template<class TipoVariavel>
 void Matrix<TipoVariavel>::print()
 {
     for(unsigned i = 0; i < this->rows; i++){
@@ -113,4 +143,4 @@ void Matrix<TipoVariavel>::print()
 }
 
 template class Matrix<bool>;
-template class Matrix<int>;
+template class Matrix<double>;
