@@ -1,15 +1,16 @@
 #include "matrix.h"
-
+//construtor
 Matrix::Matrix()
 {
     this->rows = 0;
     this->cols = 0;
 }
+//segundo construtor
 Matrix::Matrix(unsigned rows, unsigned cols)
 {
     this->Alloc(rows, cols);
 }
-
+//destrutor
 Matrix::~Matrix()
 {
     for(unsigned i = 0; i< this->rows; i++)
@@ -19,9 +20,9 @@ Matrix::~Matrix()
         delete Mat[j];
 
     delete Mat;
-
 }
-//Erro com o try e o catch.
+/*Erro com o try e o catch.
+Função que alloc a matriz na memoria */
 void Matrix::Alloc(unsigned rows, unsigned cols)
 {
     //try
@@ -38,8 +39,7 @@ void Matrix::Alloc(unsigned rows, unsigned cols)
       //  std::cout << "erro na alocação";
     //}
 }
-
-
+//operador de comparação & determina se algum termo da matriz é igual
 Matrix Matrix::operator&(Matrix M)
 {
     Matrix ret;
@@ -51,7 +51,7 @@ Matrix Matrix::operator&(Matrix M)
 
         return ret;
 }
-
+//operador de igualdade
 Matrix Matrix::operator=(Matrix A)
 {   
     Matrix ret;
@@ -64,7 +64,7 @@ Matrix Matrix::operator=(Matrix A)
 
     return ret;
 }
-
+//
 void Matrix::InitMat(unsigned rows, unsigned cols)
 {
     this->Mat = new bool *[rows];
