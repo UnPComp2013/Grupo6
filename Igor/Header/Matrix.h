@@ -14,10 +14,13 @@ private:
 public:
     Matrix();
     ~Matrix();
-    Matrix operator& (Matrix<TipoVariavel> M);
-    Matrix operator* (TipoVariavel a);
-    Matrix operator* (Matrix<TipoVariavel> M);
     Matrix(unsigned rows, unsigned cols);
+    Matrix operator& (Matrix<TipoVariavel> M);
+    Matrix operator* (Matrix<TipoVariavel> M);
+    Matrix operator* (TipoVariavel a);
+    
+    friend Matrix operator *(TipoVariavel a, Matrix M)(return M*a;)
+    
     void    print();
     void    alloc(unsigned rows, unsigned cols);
     void    add(unsigned row, unsigned col, TipoVariavel value);
