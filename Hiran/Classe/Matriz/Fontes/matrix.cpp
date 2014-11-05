@@ -7,7 +7,7 @@ Matrix::Matrix()
 }
 Matrix::Matrix(unsigned rows, unsigned cols)
 {
-    this->alloc(rows, cols);
+    this->Alloc(rows, cols);
 }
 
 Matrix::~Matrix()
