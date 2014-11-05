@@ -40,7 +40,16 @@ void Matrix::alloc(unsigned rows, unsigned cols)
 
 Matrix Matrix::operator&(Matrix M)
 {
+    Matrix ret;
+        ret.InitMat(this->rows,this->cols);
+
+        for(int i = 0; i < this->rows; i++)
+            for(int j = 0; j < this->cols; j++)
+              ret.Mat[i][j] = (bool)this->Mat[i][j] &(bool)M.Mat[i][j];
+
+        return ret;
 }
+
 Matrix Matrix::operator=(Matrix M)
 {   
     Matrix ret;
