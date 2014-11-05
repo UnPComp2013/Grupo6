@@ -21,22 +21,24 @@ Matrix::~Matrix()
     delete Mat;
 
 }
-void Matrix::alloc(unsigned rows, unsigned cols)
+//Erro com o try e o catch.
+void Matrix::Alloc(unsigned rows, unsigned cols)
 {
-    try
-    {
+    //try
+    //{
         this->Mat = new bool*[cols];
         for(unsigned i = 0; i < cols; ++i)
             this->Mat[i] = new bool[rows];
 
         this->rows = rows;
         this->cols = cols;
-    }
-    catch (std::bad_alloc&)
-    {
-        std::cout << "erro na alocação";
-    }
+    //}
+    //catch (std::bad_alloc&)
+    //{
+      //  std::cout << "erro na alocação";
+    //}
 }
+
 
 Matrix Matrix::operator&(Matrix M)
 {
