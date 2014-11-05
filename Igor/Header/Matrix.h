@@ -19,7 +19,7 @@ public:
     Matrix operator* (Matrix<TipoVariavel> M);
     Matrix operator* (TipoVariavel a);
     
-    friend Matrix operator *(TipoVariavel a, Matrix M)(return M*a;)
+    friend Matrix operator *(TipoVariavel a, Matrix M){return M*a;}
     
     void    print();
     void    alloc(unsigned rows, unsigned cols);
