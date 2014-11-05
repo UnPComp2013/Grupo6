@@ -50,15 +50,15 @@ Matrix Matrix::operator&(Matrix M)
         return ret;
 }
 
-Matrix Matrix::operator=(Matrix M)
+Matrix Matrix::operator=(Matrix A)
 {   
     Matrix ret;
 
-    ret.alloc(Mat.rows, Mat.cols);
+    ret.Alloc(A.rows, A.cols);
 
-    for(unsigned i = 0; i < Mat.rows; i++)
-        for(unsigned j = 0; j < Mat.cols; j++)
-            ret.Mat[i][j] = Mat.[i][j];
+    for(unsigned i = 0; i < A.rows; i++)
+        for(unsigned j = 0; j < A.cols; j++)
+            ret.Mat[i][j] = A.Mat[i][j];
 
     return ret;
 }
