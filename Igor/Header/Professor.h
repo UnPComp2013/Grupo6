@@ -1,18 +1,24 @@
+#ifndef PROFESSOR_H
+#define PROFESSOR_H
+
 #include <matrix.h>
+#include <string>
 
 class Professor
 {
-    Matrix HorarioProfessor, Restricoes, Disciplina;
-  
-  public:
-    Professor();
+    unsigned ID, QuantidadeDisciplinas;     //Informações do professor
+    string nome;
+    Matrix QuadroHorario, restricoes;       //Matriz de restrição e horário
+    //Disciplina disciplinas[];
+public:
+    Professor(unsigned ID);                 //Puxa do banco as infos do professor
     ~Professor();
-    
-    Matrix TabelaHorario      ();                               //Exibe a Matriz com os horarios 
-    Matrix CadastroHorario    (bool A);
-    Matrix CadastroRestricao  (bool A);
-    Matrix PosicaoRestricao   (unsigned row, unsigned col)      //Retorna a posicao da restricao
-    
-    bool ExisteRestricoes(Matrix A)                             //Verifica se há alguma restrição para este professor
-    
-}
+
+    Matrix GetQuadroHorario();              //Retorna o Quadro de Horário atual
+    Matrix GetRestricao();                  //Retorna as restricoes de horario
+
+    void SetQuadroHorario(Matrix A);        //Salva o Quadro de Horário (organizado pelo PSO)
+    //Disciplina
+};
+
+#endif // PROFESSOR_H
