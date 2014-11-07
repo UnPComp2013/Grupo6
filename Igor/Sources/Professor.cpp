@@ -1,15 +1,9 @@
 #include "professor.h"
 
-Professor::Professor ()
+template <class TipoDaClasse>
+Professor<TipoDaClasse>::Professor()
 {
-  this->HorarioProfessor  = NULL;
-  this->Restricoes        = NULL;
-  this->Disciplinas       = NULL;
 }
 
-Professor::~Professor ()
-{
-  delete this->HorarioProfessor;
-  delete this->Restricoes;
-  delete this->Disciplinas;
-}
+template class Matrix<bool>;
+template class Matrix<double>;
