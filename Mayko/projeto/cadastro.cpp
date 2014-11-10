@@ -28,7 +28,9 @@ cadastro::~cadastro()
 
 
 
-void cadastro::on_btn_confirma_clicked()
+
+
+void cadastro::on__1_clicked()
 {
     Login conn;
     QString curso, email, nome, senha, usuario;
@@ -59,4 +61,3 @@ void cadastro::on_btn_confirma_clicked()
         QMessageBox::critical(this,tr("Error::"),qry.lastError().text());
     }
 }
-
