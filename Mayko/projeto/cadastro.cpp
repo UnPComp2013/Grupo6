@@ -93,3 +93,32 @@ void cadastro::on__2_clicked()
         QMessageBox::critical(this,tr("Error::"),qry.lastError().text());
     }
 }
+
+void cadastro::on__3_clicked()
+{
+    Login conn;
+    QString curso, email, nome, senha, usuario;
+    curso = ui->ln_curso_3->text();
+    nome = ui->ln_nome_3->text();
+
+    if(!conn.connOpen())
+    {
+        qDebug()<<"Failed to open the database";
+        return;
+    }
+
+    conn.connOpen();
+    QSqlQuery qry;
+    qry.prepare("insert into TBL_projeto (curso, nome) values ('"+curso+"','"+nome+"'");
+
+    if(qry.exec())
+    {
+      QMessageBox::information(this, tr("Salvando"), tr("Salvo com sucesso"));
+      conn.connClose();
+      this->hide();
+    }
+    else
+    {
+        QMessageBox::critical(this,tr("Error::"),qry.lastError().text());
+    }
+}
