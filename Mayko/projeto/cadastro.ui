@@ -57,7 +57,7 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -543,6 +543,22 @@
     <hint type="destinationlabel">
      <x>487</x>
      <y>344</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_cancel_1</sender>
+   <signal>clicked()</signal>
+   <receiver>cadastro</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>411</x>
+     <y>367</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>490</x>
+     <y>329</y>
     </hint>
    </hints>
   </connection>
