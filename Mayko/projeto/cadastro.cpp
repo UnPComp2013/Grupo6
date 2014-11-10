@@ -60,9 +60,3 @@ void cadastro::on_btn_confirma_clicked()
     }
 }
 
-
-
-void cadastro::on_btn_update_clicked()
-{
-
-}
