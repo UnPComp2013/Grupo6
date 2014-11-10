@@ -22,6 +22,8 @@ private slots:
 
     void on_btn_update_clicked();
 
+    void on__1_clicked();
+
 private:
     Ui::cadastro *ui;
 };
