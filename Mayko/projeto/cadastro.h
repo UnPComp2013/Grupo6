@@ -26,6 +26,8 @@ private slots:
 
     void on__2_clicked();
 
+    void on__3_clicked();
+
 private:
     Ui::cadastro *ui;
 };
