@@ -79,7 +79,7 @@ void cadastro::on__2_clicked()
 
     conn.connOpen();
     QSqlQuery qry;
-    qry.prepare("insert into TBL_projeto (curso, email, nome, Senha, Login) values ('"+email+"','"+nome+"','"+senha+"','"+usuario+"')");
+    qry.prepare("insert into TBL_projeto (email, nome, Senha, Login) values ('"+email+"','"+nome+"','"+senha+"','"+usuario+"')");
 
     if(qry.exec())
     {
