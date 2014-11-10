@@ -34,11 +34,11 @@ void cadastro::on__1_clicked()
 {
     Login conn;
     QString curso, email, nome, senha, usuario;
-    curso = ui->ln_curso->text();
-    email = ui->ln_email->text();
-    nome = ui->ln_nome->text();
-    usuario = ui->ln_usuario->text();
-    senha = ui->ln_senha->text();
+    curso = ui->ln_curso_1->text();
+    email = ui->ln_email_1->text();
+    nome = ui->ln_nome_1->text();
+    usuario = ui->ln_usuario_1->text();
+    senha = ui->ln_senha_1->text();
 
     if(!conn.connOpen())
     {
