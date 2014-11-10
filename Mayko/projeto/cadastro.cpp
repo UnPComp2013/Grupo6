@@ -65,8 +65,7 @@ void cadastro::on__1_clicked()
 void cadastro::on__2_clicked()
 {
     Login conn;
-    QString curso, email, nome, senha, usuario;
-    curso = ui->ln_curso_2->text();
+    QString email, nome, senha, usuario;
     email = ui->ln_email_2->text();
     nome = ui->ln_nome_2->text();
     usuario = ui->ln_usuario_2->text();
@@ -80,7 +79,7 @@ void cadastro::on__2_clicked()
 
     conn.connOpen();
     QSqlQuery qry;
-    qry.prepare("insert into TBL_projeto (curso, email, nome, Senha, Login) values ('"+curso+"','"+email+"','"+nome+"','"+senha+"','"+usuario+"')");
+    qry.prepare("insert into TBL_projeto (curso, email, nome, Senha, Login) values ('"+email+"','"+nome+"','"+senha+"','"+usuario+"')");
 
     if(qry.exec())
     {
