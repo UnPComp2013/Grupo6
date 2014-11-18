@@ -16,3 +16,10 @@ Professor::Professor(unsigned ID)
     this->restricoes = NULL;
     this->QuantidadeDisciplinas = 0;
 }
+Professor::~Professor()
+{
+}
+std::string* Professor::GetDiscliplinas()
+{
+    return this->Disciplinas;
+}
