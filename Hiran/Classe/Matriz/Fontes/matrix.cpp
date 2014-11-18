@@ -13,7 +13,8 @@ Matrix<TipoVariavel>::Matrix(unsigned rows, unsigned cols)
     this->Alloc(rows, cols);
 }
 //destrutor
-Matrix::~Matrix()
+template<class TipoVariavel>
+Matrix<TipoVariavel>::~Matrix()
 {
     for(unsigned i = 0; i< this->rows; i++)
         delete Mat[i];
@@ -22,8 +23,8 @@ Matrix::~Matrix()
         delete Mat[j];
 
     delete Mat;
-}
 
+}
 void Matrix::Alloc(unsigned rows, unsigned cols)
 {
     try
