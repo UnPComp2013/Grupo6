@@ -1,5 +1,5 @@
 #include "matrix.h"
-//construtor
+//construtor com as variaveis iniciais
 template<class TipoVariavel>
 Matrix<TipoVariavel>::Matrix()
 {
