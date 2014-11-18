@@ -82,10 +82,11 @@ void Matrix::InitMat(unsigned rows, unsigned cols)
     for(unsigned i = 0; i < rows; i++)
         this->Mat[i] = new bool[cols];
 }
-void Matrix::Add(unsigned rows, unsigned cols, bool valor)
+template<class TipoVariavel>
+void Matrix<TipoVariavel>::Add(unsigned rows, unsigned cols, bool valor)
 {
     {
-         Matrix temp;
+         Matrix<TipoVariavel> temp;
          unsigned MaxLin = rows, MaxCol = cols;
 
          if( this-> rows >= MaxLin && this->cols >= MaxCol)
