@@ -7,7 +7,8 @@ Matrix<TipoVariavel>::Matrix()
     this->cols = 0;
 }
 //segundo construtor
-Matrix::Matrix(unsigned rows, unsigned cols)
+template<class TipoVariavel>
+Matrix<TipoVariavel>::Matrix(unsigned rows, unsigned cols)
 {
     this->Alloc(rows, cols);
 }
