@@ -25,7 +25,8 @@ Matrix<TipoVariavel>::~Matrix()
     delete Mat;
 
 }
-void Matrix::Alloc(unsigned rows, unsigned cols)
+template<class TipoVariavel>
+void Matrix<TipoVariavel>::Alloc(unsigned rows, unsigned cols)
 {
     try
     {
