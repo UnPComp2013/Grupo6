@@ -77,13 +77,14 @@ Matrix<TipoVariavel> Matrix<TipoVariavel>::operator=(Matrix A)
     for(unsigned i = 0; i < rows; i++)
         this->Mat[i] = new bool[cols];
 }:*///
-//tem a mesma funçã
+/*
 void Matrix::InitMat(unsigned rows, unsigned cols)
 {
     this->Mat = new bool *[rows];
     for(unsigned i = 0; i < rows; i++)
         this->Mat[i] = new bool[cols];
 }
+*/
 //add adiciona um valor a um determinado local da matriz
 template<class TipoVariavel>
 void Matrix<TipoVariavel>::Add(unsigned rows, unsigned cols, bool valor)
