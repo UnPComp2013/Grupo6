@@ -1,3 +1,7 @@
-Classe Matriz
+Classes usadas ate agora no trabalho
 ========================
-Cria Matrizes em 2D e em 3D ainda não mas logo ira fazer isso =P
+Classes:
+  Matrix
+  Professor
+  Disciplina
+  Turma
