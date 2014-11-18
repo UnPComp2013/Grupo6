@@ -1,19 +1,19 @@
-#ifndef MATRIX_H
 #define MATRIX_H
-#include <iostream.h>
+#include <iostream>
+
+template<class TipoVariavel>
 class Matrix
 {
-
     unsigned rows, cols;
-    bool **Mat;
+    TipoVariavel **Mat;
 
 public:
 
     Matrix();
     Matrix(unsigned rows, unsigned cols);
     ~Matrix();
-    Matrix operator & (Matrix M);
-    Matrix operator = (Matrix A);
+    Matrix operator & (Matrix<TipoVariavel> M);
+    Matrix operator = (Matrix<TipoVariavel> A);
 
     void Alloc(unsigned rows, unsigned cols);
     void Add(unsigned rows, unsigned cols, bool valor);
