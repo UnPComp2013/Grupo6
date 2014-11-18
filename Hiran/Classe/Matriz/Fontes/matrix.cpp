@@ -43,10 +43,11 @@ void Matrix<TipoVariavel>::Alloc(unsigned rows, unsigned cols)
     }
 }
 //operador de comparação & determina se algum termo da matriz é igual
-Matrix Matrix::operator&(Matrix M)
+template<class TipoVariavel>
+Matrix<TipoVariavel> Matrix<TipoVariavel>::operator&(Matrix M)
 {
-    Matrix ret;
-        ret.InitMat(this->rows,this->cols);
+    Matrix<TipoVariavel> ret;
+        ret.Alloc(this->rows,this->cols);
 
         for(int i = 0; i < this->rows; i++)
             for(int j = 0; j < this->cols; j++)
