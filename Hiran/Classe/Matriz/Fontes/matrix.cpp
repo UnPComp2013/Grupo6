@@ -56,9 +56,10 @@ Matrix<TipoVariavel> Matrix<TipoVariavel>::operator&(Matrix M)
         return ret;
 }
 //operador de igualdade
-Matrix Matrix::operator=(Matrix A)
+template<class TipoVariavel>
+Matrix<TipoVariavel> Matrix<TipoVariavel>::operator=(Matrix A)
 {   
-    Matrix ret;
+    Matrix<TipoVariavel> ret;
 
     ret.Alloc(A.rows, A.cols);
 
@@ -68,7 +69,13 @@ Matrix Matrix::operator=(Matrix A)
 
     return ret;
 }
-//
+
+/*void Matrix::InitMat(unsigned rows, unsigned cols)
+{
+    this->Mat = new bool *[rows];
+    for(unsigned i = 0; i < rows; i++)
+        this->Mat[i] = new bool[cols];
+}:*///
 void Matrix::InitMat(unsigned rows, unsigned cols)
 {
     this->Mat = new bool *[rows];
