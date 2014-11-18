@@ -115,3 +115,6 @@ void Matrix<TipoVariavel>::Add(unsigned rows, unsigned cols, bool valor)
              }
     }
 }
+template class Matrix<bool>;
+template class Matrix<double>;
+template class Matrix<char>;
