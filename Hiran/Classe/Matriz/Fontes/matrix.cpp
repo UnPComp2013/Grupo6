@@ -1,6 +1,7 @@
 #include "matrix.h"
 //construtor
-Matrix::Matrix()
+template<class TipoVariavel>
+Matrix<TipoVariavel>::Matrix()
 {
     this->rows = 0;
     this->cols = 0;
