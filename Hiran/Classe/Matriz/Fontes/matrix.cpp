@@ -6,7 +6,7 @@ Matrix<TipoVariavel>::Matrix()
     this->rows = 0;
     this->cols = 0;
 }
-//segundo construtor
+//segundo construtor com o intuito de allocar a matriz
 template<class TipoVariavel>
 Matrix<TipoVariavel>::Matrix(unsigned rows, unsigned cols)
 {
@@ -25,6 +25,7 @@ Matrix<TipoVariavel>::~Matrix()
     delete Mat;
 
 }
+//Alloca a matriz
 template<class TipoVariavel>
 void Matrix<TipoVariavel>::Alloc(unsigned rows, unsigned cols)
 {
@@ -76,12 +77,14 @@ Matrix<TipoVariavel> Matrix<TipoVariavel>::operator=(Matrix A)
     for(unsigned i = 0; i < rows; i++)
         this->Mat[i] = new bool[cols];
 }:*///
+//tem a mesma funçã
 void Matrix::InitMat(unsigned rows, unsigned cols)
 {
     this->Mat = new bool *[rows];
     for(unsigned i = 0; i < rows; i++)
         this->Mat[i] = new bool[cols];
 }
+//add adiciona um valor a um determinado local da matriz
 template<class TipoVariavel>
 void Matrix<TipoVariavel>::Add(unsigned rows, unsigned cols, bool valor)
 {
