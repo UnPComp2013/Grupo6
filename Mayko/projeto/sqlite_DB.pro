@@ -16,12 +16,16 @@ SOURCES += main.cpp\
         login.cpp \
     cadastro.cpp \
     consulta.cpp \
-    menu.cpp
+    menu.cpp \
+    matrix.cpp \
+    professor.cpp
 
 HEADERS  += login.h \
     cadastro.h \
     consulta.h \
-    menu.h
+    menu.h \
+    matrix.h \
+    professor.h
 
 FORMS    += login.ui \
     cadastro.ui \
