@@ -1,17 +1,20 @@
 #include "matrix.h"
-//construtor
-Matrix::Matrix()
+//construtor com as variaveis iniciais
+template<class TipoVariavel>
+Matrix<TipoVariavel>::Matrix()
 {
     this->rows = 0;
     this->cols = 0;
 }
-//segundo construtor
-Matrix::Matrix(unsigned rows, unsigned cols)
+//segundo construtor com o intuito de allocar a matriz
+template<class TipoVariavel>
+Matrix<TipoVariavel>::Matrix(unsigned rows, unsigned cols)
 {
     this->Alloc(rows, cols);
 }
 //destrutor
-Matrix::~Matrix()
+template<class TipoVariavel>
+Matrix<TipoVariavel>::~Matrix()
 {
     for(unsigned i = 0; i< this->rows; i++)
         delete Mat[i];
@@ -20,9 +23,11 @@ Matrix::~Matrix()
         delete Mat[j];
 
     delete Mat;
-}
 
-void Matrix::Alloc(unsigned rows, unsigned cols)
+}
+//Alloca a matriz
+template<class TipoVariavel>
+void Matrix<TipoVariavel>::Alloc(unsigned rows, unsigned cols)
 {
     try
     {
@@ -39,10 +44,11 @@ void Matrix::Alloc(unsigned rows, unsigned cols)
     }
 }
 //operador de comparação & determina se algum termo da matriz é igual
-Matrix Matrix::operator&(Matrix M)
+template<class TipoVariavel>
+Matrix<TipoVariavel> Matrix<TipoVariavel>::operator&(Matrix M)
 {
-    Matrix ret;
-        ret.InitMat(this->rows,this->cols);
+    Matrix<TipoVariavel> ret;
+        ret.Alloc(this->rows,this->cols);
 
         for(int i = 0; i < this->rows; i++)
             for(int j = 0; j < this->cols; j++)
@@ -51,9 +57,10 @@ Matrix Matrix::operator&(Matrix M)
         return ret;
 }
 //operador de igualdade
-Matrix Matrix::operator=(Matrix A)
+template<class TipoVariavel>
+Matrix<TipoVariavel> Matrix<TipoVariavel>::operator=(Matrix A)
 {   
-    Matrix ret;
+    Matrix<TipoVariavel> ret;
 
     ret.Alloc(A.rows, A.cols);
 
@@ -63,17 +70,27 @@ Matrix Matrix::operator=(Matrix A)
 
     return ret;
 }
-//
+
+/*void Matrix::InitMat(unsigned rows, unsigned cols)
+{
+    this->Mat = new bool *[rows];
+    for(unsigned i = 0; i < rows; i++)
+        this->Mat[i] = new bool[cols];
+}:*///
+/*
 void Matrix::InitMat(unsigned rows, unsigned cols)
 {
     this->Mat = new bool *[rows];
     for(unsigned i = 0; i < rows; i++)
         this->Mat[i] = new bool[cols];
 }
-void Matrix::Add(unsigned rows, unsigned cols, bool valor)
+*/
+//add adiciona um valor a um determinado local da matriz
+template<class TipoVariavel>
+void Matrix<TipoVariavel>::Add(unsigned rows, unsigned cols, bool valor)
 {
     {
-         Matrix temp;
+         Matrix<TipoVariavel> temp;
          unsigned MaxLin = rows, MaxCol = cols;
 
          if( this-> rows >= MaxLin && this->cols >= MaxCol)
@@ -102,3 +119,6 @@ void Matrix::Add(unsigned rows, unsigned cols, bool valor)
              }
     }
 }
+template class Matrix<bool>;
+template class Matrix<double>;
+template class Matrix<char>;
