@@ -18,9 +18,9 @@ class Disciplina
 
 public:
     //! Constructor.
-       /*!
-         .
-       */
+    /*!
+     * \brief Disciplina
+     */
     Disciplina();
     //~Disciplina();
     //! Função que pega o nome da disciplinas, não possui parâmetros de entrada retorna o nome.
@@ -66,10 +66,9 @@ public:
      */
     void setProfessor(Professor professor);
 
-    int ocupacao1NaColuna[5], ocupacao2NaColuna[5];           //Define como a disciplina vai ser ocupada no quadro de horário dependendo da carga horária
+    int ocupacao1NaColuna[5], ocupacao2NaColuna[5]; //!<Define como a disciplina vai ser ocupada no quadro de horário dependendo da carga horária
 
 
 };
 
 #endif // DISCIPLINA_H
-
