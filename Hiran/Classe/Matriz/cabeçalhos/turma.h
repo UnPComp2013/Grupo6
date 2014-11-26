@@ -42,9 +42,9 @@ public:
      */
     int GetQuantidadeDeProfessores(){ return this->QuantidadeDeProfessores; }
 
-    Disciplina *Disciplinas;
-    Professor *Professores;
-    Matrix<char> QuadroDeHorarioTurma;
+    Disciplina *Disciplinas; //!< Disciplinas ponteiro de disciplinas
+    Professor *Professores; //!< Professor ponteiro de professores
+    Matrix<char> QuadroDeHorarioTurma;  //! Matriz de tipo character com o quadro de rorarios da turma.
     //Só poderá ser setado valores pelo banco ou pela interface do programa através do construtor
     //void setQuantidadeDisciplinas(unsigned QuantidadeDeDisciplinas);
     //void setQuantidadeProfessores(unsigned QuantidadeDeProfessores);
