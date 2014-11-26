@@ -11,6 +11,7 @@ class avalia
     Turma *turma;
     Matrix<bool> restricoes;
 
+
 public:
     //! Primeiro Constructor.
     /*!
@@ -27,7 +28,6 @@ public:
     avalia(string nomeTurma);
     //! Destructor
         /*!
-            .
          */
     ~avalia();
     //! Uma função de organização, não possuindo parâmetros de entrada e nem de saída.
@@ -49,7 +49,7 @@ public:
     /*!
      * \brief MontarQuadro
      * \param x
-     * \return
+     * \return QuadroDeHorario
      */
     bool MontarQuadro(int x);
     //!Função responsável por classificar os horários com base na carga horaria e se a disciplinas é pratica ou não, parâmetro de entrada a disciplinas
@@ -64,11 +64,21 @@ public:
      * \param disciplina
      */
     void classificarProfessorDaDisciplina(Disciplina &disciplina);    //Diz qual professor vai ministrar a disciplina
-
-
+    //! Função de retorno do erro que o PSO vai retorna um Matriz double.
+    /*!
+     * \brief AvaliaResultadoPSO
+     * \param amostragem
+     * \return Matrix2Evaluate
+     */
     double AvaliaResultadoPSO(Matrix<double>& amostragem);
+    //! Função de retorno do erro que o PSO vai retorna uma matriz float.
+    /*!
+     * \brief AvaliaResultadoPSO
+     * \param amostragem
+     * \return Matrix2Evaluate
+     */
     double AvaliaResultadoPSO(Matrix<float>& amostragem);
-    Disciplina **QuadroDeHorario;          //Matriz de disciplinas
+    Disciplina **QuadroDeHorario;  //!< Matriz de disciplinas
 };
 
 #endif // AVALIA_H
