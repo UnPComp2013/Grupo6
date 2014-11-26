@@ -2,8 +2,11 @@
 
 //------------------------Início dos------------------------//
 //----------------Construtores e Destrutores----------------//
+avalia::avalia(){}
+
 avalia::avalia(std::string nomeTurma)
 {
+
     this->turma = new Turma(nomeTurma);
 
     for(int i = 0; i < this->turma->GetQuantidadeDeDisciplinas(); i++)
@@ -25,6 +28,16 @@ avalia::~avalia()
 //-------------------------Fim dos--------------------------//
 //----------------Construtores e Destrutores----------------//
 
+double avalia::AvaliaResultadoPSO(Matrix<double>& amostragem)
+{
+    return 1;       //aqui onde fará o tratamento do erro
+}
+
+double avalia::AvaliaResultadoPSO(Matrix<float>& amostragem)
+{
+    return 1;       //aqui onde fará o tratamento do erro
+}
+
 void avalia::initQuadroHorario()
 {
     this->QuadroDeHorario = (Disciplina**)new Disciplina[5];
@@ -35,10 +48,6 @@ void avalia::initQuadroHorario()
 
 void avalia::classificarHoraDaDisciplina(Disciplina &disciplina)
 {
-    for(int i = 0; i < this->turma->GetQuantidadeDeProfessores(); i++)
-        if(this->turma->Professores[i].GetDisciplina(0) == disciplina.getNome())
-            disciplina.setProfessor(this->turma->Professores[i]);
-
     for(int i = 0; i < 5; i++)
     {
         disciplina.ocupacao1NaColuna[i] = 0;
@@ -70,6 +79,14 @@ void avalia::classificarHoraDaDisciplina(Disciplina &disciplina)
     }
 }
 
+void avalia::classificarProfessorDaDisciplina(Disciplina &disciplina)
+{
+    for(int i = 0; i < this->turma->GetQuantidadeDeProfessores(); i++)
+        for(int j = 0; j < this->turma->Professores[i].getQuantidadeDisciplinas(); j++)
+            if(this->turma->Professores[i].GetDisciplina(j) == disciplina.getNome())
+                disciplina.setProfessor(this->turma->Professores[i]);
+}
+
 void avalia::organizarQuadro()
 {
     int disciplinaEmQuestao = 0, horarioAtual = 0;
@@ -77,9 +94,10 @@ void avalia::organizarQuadro()
     for(int i = 0; i < 6; i++){
         for(int j = 0; j < 5; j++){
             if(this->turma->Disciplinas[disciplinaEmQuestao].ocupacao1NaColuna[horarioAtual] == 1){
+                classificarProfessorDaDisciplina(this->turma->Disciplinas[disciplinaEmQuestao]);
                 this->QuadroDeHorario[j][i] = this->turma->Disciplinas[disciplinaEmQuestao];
-                //this->QuadroDeHorario[j][i].setNome(this->QuadroDeHorario[j][i].getProfessor().GetNome());
-                //std::cout<<this->QuadroDeHorario[j][i].getProfessor().GetNome();
+                this->QuadroDeHorario[j][i].setNome(this->QuadroDeHorario[j][i].getNome() + " - \n" +this->QuadroDeHorario[j][i].getProfessor().GetNome());
+
                 if(horarioAtual < 5)
                     horarioAtual++;
                 else
@@ -92,8 +110,10 @@ void avalia::organizarQuadro()
                 horarioAtual = 0;
 
                 if(this->turma->Disciplinas[disciplinaEmQuestao].ocupacao1NaColuna[horarioAtual] == 1){
+                    classificarProfessorDaDisciplina(this->turma->Disciplinas[disciplinaEmQuestao]);
                     this->QuadroDeHorario[j][i] = this->turma->Disciplinas[disciplinaEmQuestao];
-                    //this->QuadroDeHorario[j][i].setNome(this->QuadroDeHorario[j][i].getProfessor().GetNome());
+                    this->QuadroDeHorario[j][i].setNome(this->QuadroDeHorario[j][i].getNome() + " - \n" +this->QuadroDeHorario[j][i].getProfessor().GetNome());
+
                     if(horarioAtual < 5)
                         horarioAtual++;
                     else
