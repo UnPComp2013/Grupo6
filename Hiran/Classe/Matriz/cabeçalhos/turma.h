@@ -13,10 +13,33 @@ class Turma : public Professor, public Disciplina
     int QuantidadeDeDisciplinas, QuantidadeDeProfessores;
 
 public:
+    //! Primeiro Constructor.
+    /*!
+     * \brief Turma
+     */
     Turma();
+    //! Segundo Constructor.
+    /*! Vai procurar no banco de dados pelos dados necessários para forma uma turma, professores,
+     * disciplinas depois vai criar a turma com esses dados.
+     * \brief Turma
+     * \param nome
+     */
     Turma(std::string nome);
+    //! Destructor.
+    /*!
+      */
     ~Turma();
+    //! Vai pegar a quantidade de disciplinas para aquela turma.
+    /*!
+     * \brief GetQuantidadeDeDisciplinas
+     * \return QuantidadeDeDisciplinas
+     */
     int GetQuantidadeDeDisciplinas(){ return this->QuantidadeDeDisciplinas; }
+    //! Pega a quantidade de professores.
+    /*!
+     * \brief GetQuantidadeDeProfessores
+     * \return QuantidadeDeProfessores
+     */
     int GetQuantidadeDeProfessores(){ return this->QuantidadeDeProfessores; }
 
     Disciplina *Disciplinas;
